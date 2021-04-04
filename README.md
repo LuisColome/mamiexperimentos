@@ -13,6 +13,7 @@ Genesis Child theme for MamiExperimentos.com site. Uses SCSS and PrePros to comp
 ## Usage
 
 It is set up to use with [Prepros](https://prepros.io/) to complie the SCSS (with source maps). Javascript is minify (with source maps).
+Please, keep in mind is pretty much a work in progress. I've just got started (April 1, 2021).
 
 ### Features
 
@@ -24,7 +25,7 @@ It is set up to use with [Prepros](https://prepros.io/) to complie the SCSS (wit
 
 ### Credits
 
-Without these projects, this WordPress Genesis Starter Child Theme wouldn't be where it is today.
+Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 
 * [Genesis Framework](http://my.studiopress.com/themes/genesis/)
 * [SASS / SCSS](http://sass-lang.com/)
