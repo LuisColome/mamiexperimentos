@@ -1,0 +1,189 @@
+@charset "UTF-8";
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ */
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ */
+/**
+ * Button Reset
+ *
+ */
+/**
+ * Grid, Center Last
+ *
+ */
+/**
+ * Margin, No Edge
+ * Removes left margin from first item, right margin from last item
+ */
+/**
+ * Icon Position
+ *
+ */
+/**
+ * Block Cover
+ * Creates a block that covers the full width/height of parent div. Typically used on a :before pseudo element
+ */
+/**
+ * Placeholder Color
+ *
+ */
+/**
+ * Clearfix
+ *
+ */
+/**
+ * Font Sizes
+ *
+**/
+/**
+ * Columns
+ *
+ */
+/** Contact Form 7
+---------------------------------------------------------------------------- */
+.lcm-cf7-form .lcm-cf7-form_columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  .lcm-cf7-form .lcm-cf7-form_columns {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+}
+.lcm-cf7-form .lcm-cf7-form__input input {
+  margin: 20px 0;
+  padding: 14px 36px;
+  width: auto;
+  min-width: 230px;
+  border: none;
+  color: #ffffff;
+  background-color: #f36523;
+}
+.lcm-cf7-form .lcm-cf7-form__input input:hover {
+  background-color: #f68753;
+}
+
+/* Genesis Blocks
+---------------------------------------------------------------------------- */
+.gb-block-post-grid h2 a {
+  text-decoration: none;
+}
+
+.gb-block-post-grid .gb-post-grid-items h2 a:hover {
+  color: #f36523;
+}
+
+@media only screen and (max-width: 510px) {
+  .gb-block-container.alignfull::before {
+    content: " ";
+    display: table;
+  }
+
+  .gb-block-container.alignfull::after {
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+/* Display Posts Shortcode
+-------------------------------------------------------------------------------------- */
+/* Entradas Common styles
+--------------------------------------------- */
+.entradas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 2.2rem;
+}
+.entradas .entrada a {
+  text-decoration: none;
+  color: #414243;
+}
+
+/* Grid de entradas
+--------------------------------------------- */
+.entrada-grid {
+  max-width: 440px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+}
+.entrada-grid .entrada__img {
+  position: relative;
+  padding-bottom: 55%;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.entrada-grid .entrada__meta {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 14px;
+  padding: 0.5ch 2ch;
+  border-radius: 4px;
+  background-color: #f36523;
+  color: #ffffff;
+}
+.entrada-grid .entrada__header {
+  padding: 1.5rem 1.1rem;
+}
+.entrada-grid .entrada__title {
+  font-size: 21px;
+  margin: 0 0 0.4ch 0;
+}
+.entrada-grid .entrada__content {
+  font-size: 16.2px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Grid de entradas
+--------------------------------------------- */
+@media screen and (min-width: 660px) {
+  .entradas.archive-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 960px) {
+  .entradas.archive-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .entradas.archive-blog {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* Genesis Simple FAQ
+--------------------------------------------- */
+.gs-faq__question {
+  background: transparent;
+  border-bottom: 1px solid #eee;
+  color: #414243;
+  padding-left: 0;
+  padding-right: 0;
+}
+.gs-faq__question:focus, .gs-faq__question:hover {
+  background: transparent;
+  color: #f36523;
+}
+.gs-faq__question::after {
+  content: "";
+  font-family: dashicons;
+  /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+  float: right;
+}
+.gs-faq__question.gs-faq--expanded::after {
+  content: "";
+}
+/*# sourceMappingURL=blocks-plugin.css.map */

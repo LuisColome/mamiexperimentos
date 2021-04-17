@@ -6,7 +6,7 @@
  *
  * Template Name: Landing
  *
- * @package TheDock
+ * @package MamiExperimentos
  * @author  Luis Colomé
  * @license GPL-2.0-or-later
  * @link    https://luiscolome.com/

@@ -2,7 +2,7 @@
 /**
  * Template Tags
  *
- * @package      TheDock
+ * @package      MamiExperimentos
  * @author       Luis Colomé
  * @since        1.0.0
  * @license      GPL-2.0+

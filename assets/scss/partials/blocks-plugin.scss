@@ -1,3 +1,8 @@
+// Plugins 
+@import "base";
+@import "../modules/helpers";
+@import "../vendor/include-media";
+
 /** Contact Form 7
 ---------------------------------------------------------------------------- */
 
@@ -36,19 +41,145 @@
     text-decoration: none;
   }
   
-  .gb-block-post-grid .gb-post-grid-items h2 a:hover {
-    color: $primary-color;
-  }
-  
-  @media only screen and (max-width: 510px) {
+    .gb-block-post-grid .gb-post-grid-items h2 a:hover {
+        color: $primary-color;
+    }
+
+    @media only screen and (max-width: 510px) {
     .gb-block-container.alignfull::before {
-      content: " ";
-      display: table;
+        content: " ";
+        display: table;
     }
-  
+
     .gb-block-container.alignfull::after {
-      clear: both;
-      content: " ";
-      display: table;
+        clear: both;
+        content: " ";
+        display: table;
     }
-  }
+}
+
+/* Display Posts Shortcode
+-------------------------------------------------------------------------------------- */
+
+/* Entradas Common styles
+--------------------------------------------- */ 
+
+.entradas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $grid-gap;
+    margin-bottom: $margin_2x;
+  
+    .entrada {
+
+        a {
+            text-decoration: none;
+            color: $grey_9;
+        }
+    }
+}
+  
+/* Grid de entradas
+--------------------------------------------- */
+  
+  .entrada-grid {
+    max-width: 440px;
+    border: 1px solid $grey_4;
+    border-radius: $border-radius;
+    // box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08),0 2px 8px 0 rgba(0,0,0,0.12);
+  
+    .entrada__img {
+        position: relative;
+        padding-bottom: 55%;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    .entrada__meta {
+        position: absolute;
+        bottom: 1rem;
+        left: 1rem;
+        font-size: 14px;
+        padding: .5ch 2ch;
+        border-radius: $border-radius;
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    .entrada__header {
+        padding: 1.5rem 1.1rem;
+    }
+
+    .entrada__title {
+        font-size: 21px;
+        margin: 0 0 .4ch 0;
+    }
+
+    .entrada__content {
+        font-size: 16.2px;
+        line-height: 1.35;
+        margin: 0;
+    }
+}
+
+/* Grid de entradas
+--------------------------------------------- */
+
+// .entrada-blog {
+
+// }
+
+
+
+@include media('screen', '>=660px') {
+
+    .entradas {
+        &.archive-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include media('screen', '>=medium') {
+
+    .entradas {
+
+        &.archive-grid {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &.archive-blog {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+  
+  
+  
+/* Genesis Simple FAQ
+--------------------------------------------- */
+
+.gs-faq__question {
+    background: transparent;
+    border-bottom: 1px solid #eee;
+    color: $grey_9;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:focus,
+    &:hover {
+        background: transparent;
+        color: $primary-color;
+    }
+
+    &::after {
+        content: "\f132";
+        font-family: dashicons; /* stylelint-disable-line font-family-no-missing-generic-family-keyword */
+        float: right;
+    }
+
+    &.gs-faq--expanded::after {
+        content: "\f460";
+    }
+}

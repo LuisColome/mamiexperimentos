@@ -7,6 +7,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  @include font-sizes(16px, 18px);
 }
 
 body {
@@ -29,9 +30,12 @@ a {
   text-decoration: underline;
   text-decoration-color: $grey-7;
   @include transition;
+  font-weight: 500;
+
   &:hover {
     color: $grey-7;
   }
+
   svg {
     @include transition;
   }
@@ -53,7 +57,7 @@ hr {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 em,
@@ -95,8 +99,8 @@ h4,
 h5,
 h6 {
   color: $grey_9;
-  font-family: $sans-serif;
-  font-weight: 700;
+  font-family: $josefin, $sans-serif;
+  font-weight: 600;
   line-height: 1.2;
   margin: $margin_2x 0 $block-margin;
   scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
@@ -138,6 +142,13 @@ h6 {
 
 h6 {
   text-transform: uppercase;
+}
+
+
+/* Gradients
+--------------------------------------------- */
+.has-light-purple-to-pink-gradient-background {
+    background: linear-gradient( to bottom, rgba(53, 92, 125), rgba(108, 91, 123), rgba(193, 102, 119) );
 }
 
 /* Objects

@@ -4,7 +4,7 @@
  *
  * This file adds functions to the Genesis Sample Theme.
  *
- * @package TheDock
+ * @package MamiExperimentos
  * @author  Luis Colomé
  * @license GPL-2.0-or-later
  * @link    https://luiscolome.com/
@@ -58,7 +58,7 @@ add_action( 'enqueue_block_editor_assets', 'ea_gutenberg_scripts' );
 *
 */
 function lcm_theme_fonts_url() {
-	return 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&display=swap';
+	return 'https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600;700&display=optional';
 }
 
 function ea_child_theme_setup() {
@@ -177,6 +177,15 @@ function ea_child_theme_setup() {
 		),
 	) );
 
+    // -- Editor custom gradients
+    add_theme_support('editor-gradient-presets', array(
+        array(
+            'name' => __('MamiExperimentos gradient', 'your-textdomain'),
+            'gradient' => 'linear-gradient( to bottom, rgba(53, 92, 125), rgba(108, 91, 123), rgba(193, 102, 119) )',
+            'slug' => 'light-purple-to-pink'
+        ),
+    ));
+
 	// // Registers the responsive menus. (/config/responsive-menus.php)
 	// if ( function_exists( 'genesis_register_responsive_menus' ) ) {
 	// 	genesis_register_responsive_menus( genesis_get_config( 'responsive-menus' ) );
@@ -213,3 +222,26 @@ function ea_template_hierarchy( $template ) {
 	return $template;
 }
 add_filter( 'template_include', 'ea_template_hierarchy' );
+
+/**
+ * Template Parts with Display Posts Shortcode
+ * @author Bill Erickson
+ * @see https://www.billerickson.net/template-parts-with-display-posts-shortcode
+ *
+ * @param string $output, current output of post
+ * @param array $original_atts, original attributes passed to shortcode
+ * @return string $output
+ */
+function be_dps_template_part( $output, $original_atts ) {
+
+	// Return early if our "layout" attribute is not specified
+	if( empty( $original_atts['layout'] ) )
+		return $output;
+	ob_start();
+	get_template_part( 'partials/dps', $original_atts['layout'] );
+	$new_output = ob_get_clean();
+	if( !empty( $new_output ) )
+		$output = $new_output;
+	return $output;
+}
+add_action( 'display_posts_shortcode_output', 'be_dps_template_part', 10, 2 );

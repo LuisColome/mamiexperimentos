@@ -1,6 +1,6 @@
-# MamiExperimentos 
+# MamiExperimentos Genesis Child Theme
 
-Version: 0.9.0
+[![MamiExperimentos Genesis Child Theme v0.9.0 badge][changelog-badge]][changelog] [![Version v0.9.0 Badge][version-badge]][changelog]
 
 ## Author:
 
@@ -13,7 +13,7 @@ Genesis Child theme for MamiExperimentos.com site. Uses SCSS and PrePros to comp
 ## Usage
 
 It is set up to use with [Prepros](https://prepros.io/) to complie the SCSS (with source maps). Javascript is minify (with source maps).
-Please, keep in mind is pretty much a work in progress. I've just got started (April 1, 2021).
+Please, keep in mind is pretty much a work in progress. I've just got started (April 4, 2021).
 
 ### Features
 
@@ -31,3 +31,8 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 * [SASS / SCSS](http://sass-lang.com/)
 * [Bill Erickson's Genesis Child Theme](https://github.com/billerickson/BE-Genesis-Child)
 * [Eduardo Boucas' Include Media Queries](https://eduardoboucas.github.io/include-media/)
+
+
+[changelog]: ./CHANGELOG.md
+[changelog-badge]: https://img.shields.io/badge/Changelog-MamiExeprimentos%20Genesis%20Child%20Theme%20v0.9.0-orange
+[version-badge]: https://img.shields.io/badge/version-v0.9.0-blue
