@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Support for MC4WP plugin.
 
+## [0.9.1] - 2021-18-04
+### Added
+- Wotfard italis styles.
+- Typography styles.
+- Display Posts Shortcode plugin partial support (Grid styles for Actividades and Exepriemntos).
+
 ## [0.9.0] - 2021-03-04
 ### Added
 - Inicial upload.
