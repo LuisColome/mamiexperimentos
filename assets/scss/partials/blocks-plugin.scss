@@ -61,6 +61,23 @@
 /* Display Posts Shortcode
 -------------------------------------------------------------------------------------- */
 
+/* Entradas grid
+--------------------------------------------- */ 
+
+.entradas {
+    .entry-content & {
+        margin: $margin_2x 0 $margin_4x;
+    }
+
+    &.archive-grid {
+        grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
+    }
+
+    &.archive-blog {
+        grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    }
+}
+
 /* Entradas Common styles
 --------------------------------------------- */ 
 
@@ -70,12 +87,14 @@
     gap: $grid-gap;
     margin-bottom: $margin_2x;
   
-    .entrada {
+    .entrada__link {
+        font-weight: 300;
+        text-decoration: none;
+        color: $grey_9;
+    }
 
-        a {
-            text-decoration: none;
-            color: $grey_9;
-        }
+    .entrada__content {
+        font-weight: 300;
     }
 }
   
@@ -83,10 +102,7 @@
 --------------------------------------------- */
   
   .entrada-grid {
-    max-width: 440px;
-    border: 1px solid $grey_4;
     border-radius: $border-radius;
-    // box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.25);
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08),0 2px 8px 0 rgba(0,0,0,0.12);
   
     .entrada__img {
@@ -94,66 +110,41 @@
         padding-bottom: 55%;
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
+        opacity: .85;
     }
 
     .entrada__meta {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        font-size: 14px;
-        padding: .5ch 2ch;
+        // position: absolute;
+        // bottom: 1rem;
+        // left: 1rem;
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 400;
+        padding: .35em 1.2em;
         border-radius: $border-radius;
         background-color: $primary-color;
         color: $white;
     }
 
     .entrada__header {
-        padding: 1.5rem 1.1rem;
+        padding: 1.1rem;
     }
 
     .entrada__title {
-        font-size: 21px;
-        margin: 0 0 .4ch 0;
+        font-size: 1.42em;
+        font-weight: 600;
+        margin: .5em 0;
     }
 
     .entrada__content {
-        font-size: 16.2px;
-        line-height: 1.35;
+        font-size: .85em;
+        line-height: 1.45;
         margin: 0;
     }
 }
 
-/* Grid de entradas
+/* Entradas del Blog.
 --------------------------------------------- */
-
-// .entrada-blog {
-
-// }
-
-
-
-@include media('screen', '>=660px') {
-
-    .entradas {
-        &.archive-grid {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-}
-
-@include media('screen', '>=medium') {
-
-    .entradas {
-
-        &.archive-grid {
-            grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        &.archive-blog {
-            grid-template-columns: 1fr 1fr;
-        }
-    }
-}
   
   
   

@@ -4,14 +4,15 @@
 --------------------------------------------- */
 
 html {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
-  @include font-sizes(16px, 18px);
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+    //   @include font-sizes(16px, 17px, 18px);
+    font-size: 16px;
 }
 
 body {
-  @include base-style();
+    @include base-style();
 }
 
 button,
@@ -22,7 +23,7 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-  transition: all 0.2s ease-in-out;
+    @include transition;
 }
 
 a {
@@ -75,18 +76,24 @@ i {
 p {
   margin: 0 0 28px;
   padding: 0;
+}
 
-  &.has-small-font-size {
-    font-size: 16px;
-  }
+.has-small-font-size {
+    font-size: 0.875rem;
+}
 
-  &.has-normal-font-size {
-    font-size: 20px;
-  }
+.has-normal-font-size {
+    font-size: 1rem;
+}
 
-  &.has-large-font-size {
-    font-size: 24px;
-  }
+.has-large-font-size {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.has-huge-font-size {
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 /* Headings
@@ -98,46 +105,67 @@ h3,
 h4,
 h5,
 h6 {
-  color: $grey_9;
-  font-family: $josefin, $sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
-  margin: $margin_2x 0 $block-margin;
-  scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
+    color: $grey_9;
+    font-family: $josefin, $sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 .65em;
+    scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
-  a {
-    color: $grey-9;
-
-    &:hover {
-      color: $primary-color;;
-      text-decoration: none;
+    .entry-content > & {
+        margin: 1.1em 0 .65em;
     }
-  }
 
-  &:focus {
-    outline: none;
-  }
+    a {
+        color: $grey-9;
+
+        &:hover {
+            color: $primary-color;;
+            text-decoration: none;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    /* Green line
+    --------------------------------------------- */
+    &.green-line {
+        position: relative;
+        margin: 0 0 .8em;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -.4em;
+            left: 0;
+            width: 150px;
+            height: 4px;
+            background-color: $secondary-color;
+        }
+    }
 }
 
 h1 {
-  @include font-sizes(34px, 48px, 42px);
+  @include font-sizes(2.125rem, 2.375rem, 2.625rem);
 }
 
 h2 {
-  @include font-sizes(26px, 32px, 36px);
+  @include font-sizes(1.825rem, 2rem, 2.25rem);
 }
 
 h3 {
-  @include font-sizes(22px, 26px, 28px);
+  @include font-sizes(1.375rem, 1.625rem, 1.75rem);
 }
 
 h4{
-  @include font-sizes(20px, 24px, 26px);
+  @include font-sizes(1.25rem, 1.5rem, 1.625rem);
 }
 
 h5,
 h6 {
-  @include font-sizes(18px, 22px);
+  @include font-sizes(1.125rem, 1.375rem);
 }
 
 h6 {

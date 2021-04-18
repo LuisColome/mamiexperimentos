@@ -126,20 +126,26 @@ function ea_child_theme_setup() {
 	// -- Editor Font Sizes
 	add_theme_support( 'editor-font-sizes', array(
 		array(
-			'name'      => __( 'Small', 'ea_genesis_child' ),
-			'shortName' => __( 'S', 'ea_genesis_child' ),
-			'size'      => 16,
+			'name'      => __( 'Small', 'lcm_mamiexperimentos' ),
+			'shortName' => __( 'S', 'lcm_mamiexperimentos' ),
+			'size'      => 14,
 			'slug'      => 'small'
 		),
 		array(
-			'name'      => __( 'Normal', 'ea_genesis_child' ),
-			'shortName' => __( 'M', 'ea_genesis_child' ),
-			'size'      => 20,
+			'name'      => __( 'Normal', 'lcm_mamiexperimentos' ),
+			'shortName' => __( 'M', 'lcm_mamiexperimentos' ),
+			'size'      => 18,
 			'slug'      => 'normal'
 		),
 		array(
-			'name'      => __( 'Large', 'ea_genesis_child' ),
-			'shortName' => __( 'L', 'ea_genesis_child' ),
+			'name'      => __( 'Large', 'lcm_mamiexperimentos' ),
+			'shortName' => __( 'L', 'lcm_mamiexperimentos' ),
+			'size'      => 22,
+			'slug'      => 'large'
+		),        
+		array(
+			'name'      => __( 'Huge', 'lcm_mamiexperimentos' ),
+			'shortName' => __( 'H', 'lcm_mamiexperimentos' ),
 			'size'      => 24,
 			'slug'      => 'large'
 		),
@@ -151,27 +157,27 @@ function ea_child_theme_setup() {
 	// -- Editor Color Palette
 	add_theme_support( 'editor-color-palette', array(
 		array(
-			'name'  => __( 'Orange', 'ea_genesis_child' ),
-			'slug'  => 'orange',
-			'color'	=> '#f36523',
+			'name'  => __( 'Red', 'lcm_mamiexperimentos' ),
+			'slug'  => 'red',
+			'color'	=> '#E97171',
 		),
 		array(
-			'name'  => __( 'Yellow', 'ea_genesis_child' ),
-			'slug'  => 'yellow',
-			'color'	=> '#ffc401',
+			'name'  => __( 'Green', 'lcm_mamiexperimentos' ),
+			'slug'  => 'green',
+			'color'	=> '#73A3A5',
 		),
 		array(
-			'name'  => __( 'Grey', 'ea_genesis_child' ),
+			'name'  => __( 'Grey', 'lcm_mamiexperimentos' ),
 			'slug'  => 'grey',
 			'color' => '#f2f3f8',
 		),
 		array(
-			'name'  => __( 'Dark grey', 'ea_genesis_child' ),
+			'name'  => __( 'Dark grey', 'lcm_mamiexperimentos' ),
 			'slug'  => 'dark-grey',
-			'color' => '#616161',
+			'color' => '#414243',
 		),
 		array(
-			'name'  => __( 'White', 'ea_genesis_child' ),
+			'name'  => __( 'White', 'lcm_mamiexperimentos' ),
 			'slug'  => 'white',
 			'color' => '#ffffff',
 		),
@@ -203,8 +209,8 @@ add_action( 'genesis_setup', 'ea_child_theme_setup', 15 );
  * @return array
  */
 function ea_comment_text( $args ) {
-	$args['title_reply']          = __( 'Leave A Comment', 'ea_genesis_child' );
-	$args['label_submit']         = __( 'Post Comment',  'ea_genesis_child' );
+	$args['title_reply']          = __( 'Leave A Comment', 'lcm_mamiexperimentos' );
+	$args['label_submit']         = __( 'Post Comment',  'lcm_mamiexperimentos' );
 	$args['comment_notes_before'] = '';
 	$args['comment_notes_after']  = '';
 	return $args;

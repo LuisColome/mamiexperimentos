@@ -34,5 +34,5 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 
 
 [changelog]: ./CHANGELOG.md
-[changelog-badge]: https://img.shields.io/badge/Changelog-MamiExeprimentos%20Genesis%20Child%20Theme%20v0.9.0-orange
+[changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v0.9.0-orange
 [version-badge]: https://img.shields.io/badge/version-v0.9.0-blue

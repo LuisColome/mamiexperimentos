@@ -16,17 +16,17 @@ $black: #000;
 
 // Brand Colors
 $brand_colors: (
-	'orange': #f36523,
-    'yellow'   : #ffc401,
+	'red': #E97171,
+    'green'   : #73A3A5,
 	'grey'	: $grey_2,
-    'dark-grey' : $grey_8,
+    'dark-grey' : $grey_9,
 );
 @import "../modules/brand-color";
 
-$primary-color: brand-color( 'orange' );
-$secondary-color: brand-color('yellow');
-$base-color: $grey_8;
-$highlight: brand-color( 'orange', 'lighten' );
+$primary-color: brand-color( 'red' );
+$secondary-color: brand-color('green');
+$base-color: $grey_9;
+$highlight: brand-color( 'red', 'darken' );
 $border-color: $grey_4;
 
 $facebook: #3b5998;
@@ -50,7 +50,7 @@ $border-radius: 10px;
 // Grid
 $grid: grid;
 $grid-width: 1200px;
-$grid-gap: 32px;
+$grid-gap: 35px;
 $wrap_edge: $base-margin * 1.25;
 $margin_2x: $base-margin * 2;
 $margin_4x: $base-margin * 4;
@@ -60,14 +60,13 @@ $logo_width: 300px;
 
 // Include Media Breakpoints
 $breakpoints: (
-  'phone' : 320px,
-  'phablet' : 600px,
+  'phone' : 360px,
+  'small' : 600px,
   'tablet' : 768px, // required for include-media
   'mobile_menu' : 768px,
   'medium' : 960px,
   'large' : 1200px,
   'desktop' : $grid-width + $grid-gap, // required for include-media
-  'content-width' : $content-width + $grid-gap,
 );
 
 @import "../modules/base-styles";
