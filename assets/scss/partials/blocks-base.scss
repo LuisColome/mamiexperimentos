@@ -109,7 +109,7 @@ h6 {
     font-family: $josefin, $sans-serif;
     font-weight: 700;
     line-height: 1.2;
-    margin: 0 0 .65em;
+    margin: 0 0 $block-margin;
     scroll-margin-top: 5rem; // for the header to not hide the title on anchor links. https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/
 
     .entry-content > & {
@@ -152,7 +152,7 @@ h1 {
 }
 
 h2 {
-  @include font-sizes(1.825rem, 2rem, 2.25rem);
+  @include font-sizes(1.95rem, 2.23rem, 2.55rem);
 }
 
 h3 {

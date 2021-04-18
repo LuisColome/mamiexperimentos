@@ -149,6 +149,7 @@
     // display: none;
     visibility: hidden;
     @include transition;
+    z-index: 99999;
 
     svg {
         fill: $white;

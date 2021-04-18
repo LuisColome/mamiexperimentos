@@ -147,7 +147,7 @@ function ea_child_theme_setup() {
 			'name'      => __( 'Huge', 'lcm_mamiexperimentos' ),
 			'shortName' => __( 'H', 'lcm_mamiexperimentos' ),
 			'size'      => 24,
-			'slug'      => 'large'
+			'slug'      => 'huge'
 		),
 	) );
 

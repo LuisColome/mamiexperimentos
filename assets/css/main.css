@@ -415,7 +415,7 @@ h6 {
   font-family: "Josefin Sans", "Wotfard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 0.65em;
+  margin: 0 0 20px;
   scroll-margin-top: 5rem;
   /* Green line
   --------------------------------------------- */
@@ -492,16 +492,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.825rem;
+  font-size: 1.95rem;
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 2rem;
+    font-size: 2.23rem;
   }
 }
 @media (min-width: 960px) {
   h2 {
-    font-size: 2.25rem;
+    font-size: 2.55rem;
   }
 }
 
@@ -711,16 +711,40 @@ blockquote.wp-block-quote p:last-of-type {
 
 /* Separator
 --------------------------------------------- */
-.wp-block-separator,
-hr {
+.entry-content .wp-block-separator, .editor-styles-wrapper .wp-block-separator,
+.entry-content hr,
+.editor-styles-wrapper hr {
+  position: relative;
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 5px;
+  margin: 0;
+}
+.entry-content .wp-block-separator::before, .editor-styles-wrapper .wp-block-separator::before,
+.entry-content hr::before,
+.editor-styles-wrapper hr::before {
+  background: #73A3A5;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5px;
+}
+.entry-content .wp-block-separator.is-style-full, .editor-styles-wrapper .wp-block-separator.is-style-full,
+.entry-content hr.is-style-full,
+.editor-styles-wrapper hr.is-style-full {
   background: transparent;
   border: none;
   width: 100%;
   height: 32px;
   position: relative;
 }
-.wp-block-separator::before,
-hr::before {
+.entry-content .wp-block-separator.is-style-full::before, .editor-styles-wrapper .wp-block-separator.is-style-full::before,
+.entry-content hr.is-style-full::before,
+.editor-styles-wrapper hr.is-style-full::before {
   background: #e0e0e0;
   content: "";
   display: block;
@@ -729,6 +753,11 @@ hr::before {
   position: absolute;
   top: 50%;
   margin-top: -0.5px;
+}
+.entry-content h2 + .wp-block-separator, .editor-styles-wrapper h2 + .wp-block-separator,
+.entry-content h2 + hr,
+.editor-styles-wrapper h2 + hr {
+  margin-top: -9px;
 }
 
 /* Image and Gallery
@@ -2537,6 +2566,7 @@ textarea:focus:-ms-input-placeholder {
   text-decoration: none;
   visibility: hidden;
   transition: all 0.2s ease-in-out;
+  z-index: 99999;
 }
 .backtotop svg {
   fill: #ffffff;
