@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 - Support for MC4WP plugin.
+- White logo for header mobile navigation. 
+
+## [0.9.2] - 2021-19-04
+### Added
+- Home header and transparent navigation styles.
+- Header mobile navigation.
+- Dark overlay behind mobile navigation.
+
+### Change
+- Mobile menu floating from the right. 
 
 ## [0.9.1] - 2021-18-04
 ### Added

@@ -1885,15 +1885,45 @@ textarea:focus:-ms-input-placeholder {
   margin-right: 5px;
   position: relative;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 .nav-menu .menu-item a:last-child {
   margin-right: 0;
 }
-.nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover .submenu-expand {
+.nav-menu .menu-item:hover > a, .nav-menu .menu-item:hover .submenu-expand svg {
+  fill: #E97171;
   color: #E97171;
 }
 .nav-menu .menu-item.current-menu-item > a, .nav-menu .menu-item.current-menu-ancestor > a {
   color: #E97171;
+}
+.nav-menu .menu-item span {
+  display: inline-block;
+  text-decoration: none;
+  padding-top: 5px;
+}
+.nav-menu .menu-item span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #E97171;
+  transition: width 0.2s;
+  margin-top: 2px;
+}
+.nav-menu a:focus,
+.nav-menu a:hover,
+.nav-menu .current-menu-item > a,
+.nav-menu .sub-menu .current-menu-item > a:focus,
+.nav-menu .sub-menu .current-menu-item > a:hover {
+  text-decoration: none;
+}
+.nav-menu a:focus span::after,
+.nav-menu a:hover span::after,
+.nav-menu .current-menu-item > a span::after,
+.nav-menu .sub-menu .current-menu-item > a:focus span::after,
+.nav-menu .sub-menu .current-menu-item > a:hover span::after {
+  width: 100%;
 }
 .nav-menu .submenu-expand {
   background: transparent;
@@ -1908,6 +1938,10 @@ textarea:focus:-ms-input-placeholder {
   top: 50%;
   transform: translateY(-50%);
   right: 5px;
+}
+.nav-menu .submenu-expand svg {
+  fill: #414243;
+  transition: all 0.2s ease-in-out;
 }
 @media (max-width: 768px) {
   .nav-menu .nav-secondary .menu-item.search {
@@ -1987,21 +2021,24 @@ textarea:focus:-ms-input-placeholder {
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    max-width: 340px;
+    height: 100%;
     top: 0;
-    left: -100%;
-    background: #eeeeee;
-    border-top: 1px solid #e0e0e0;
-    transition: all 0.2s ease-in-out;
-    padding: 30% 20% 0;
+    right: -100%;
+    background: #ffffff;
+    transition: all 0.3s ease-in-out;
+    padding: 105px 35px 0;
+    overflow: auto;
+    z-index: 997;
   }
   .nav-menu.active {
-    left: 0;
+    right: 0;
+    overflow: auto;
   }
   .nav-menu .menu > .menu-item > a {
     padding: 11px 18px;
-    font-size: 20px;
+    font-size: 18px;
   }
   .nav-menu .submenu-expand {
     top: 0;
@@ -2011,8 +2048,8 @@ textarea:focus:-ms-input-placeholder {
     height: 44px;
   }
   .nav-menu .submenu-expand svg {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
   }
   .nav-menu .submenu-expand.expanded {
     transform: rotate(180deg);
@@ -2022,11 +2059,65 @@ textarea:focus:-ms-input-placeholder {
   }
   .nav-menu .sub-menu {
     display: none;
-    padding-left: 8px;
+    padding-left: 12px;
   }
   .nav-menu .sub-menu > .menu-item > a {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.4;
   }
+}
+
+/* Nav Header with Site logo
+--------------------------------------------- */
+.nav-header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 75px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #E97171;
+}
+.nav-header a {
+  display: block;
+  text-indent: -9999px;
+  width: 165px;
+  height: 50px;
+}
+@media (min-width: 769px) {
+  .nav-header {
+    display: none;
+  }
+}
+
+/* Dark Overlay
+--------------------------------------------- */
+.lcm-dark-overlay {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  z-index: 996;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+@media (min-width: 769px) {
+  .lcm-dark-overlay {
+    visibility: hidden;
+    display: none;
+  }
+}
+.lcm-dark-overlay.active {
+  opacity: 1;
 }
 
 /* Toggles
@@ -2042,6 +2133,7 @@ textarea:focus:-ms-input-placeholder {
   cursor: pointer;
   line-height: 0;
   text-align: center;
+  z-index: 999;
 }
 .search-toggle .close,
 .menu-toggle .close {
@@ -2062,7 +2154,7 @@ textarea:focus:-ms-input-placeholder {
 }
 
 .site-header .wrap > .menu-toggle, .site-header .wrap > .search-toggle {
-  width: 30px;
+  width: 26px;
   height: 18px;
 }
 @media (min-width: 769px) {
@@ -2124,7 +2216,7 @@ textarea:focus:-ms-input-placeholder {
 .menu-toggle .toggl__bar {
   display: block;
   position: absolute;
-  height: 2px;
+  height: 3px;
   width: 100%;
   background: #414243;
   border-radius: 2em;
@@ -2138,10 +2230,13 @@ textarea:focus:-ms-input-placeholder {
   top: 0px;
 }
 .menu-toggle .toggl__bar.second {
-  top: 8px;
+  top: 6px;
 }
 .menu-toggle .toggl__bar.third {
-  top: 16px;
+  top: 12px;
+}
+.home .site-header:not(.shrink) .menu-toggle .toggl__bar {
+  background-color: #ffffff;
 }
 .menu-toggle:hover, .menu-toggle:focus, .menu-toggle.active {
   background-color: transparent;
@@ -2150,14 +2245,14 @@ textarea:focus:-ms-input-placeholder {
   background-color: transparent;
 }
 .menu-toggle.active .toggl__bar {
-  background: #E97171;
-  height: 2.5px;
+  background: #ffffff;
+  height: 4px;
 }
 .menu-toggle.active .toggl__bar.first {
   transform: rotate(45deg);
   top: 0px;
   left: 8px;
-  width: 75%;
+  width: 70%;
 }
 .menu-toggle.active .toggl__bar.second {
   left: -1em;
@@ -2165,9 +2260,9 @@ textarea:focus:-ms-input-placeholder {
 }
 .menu-toggle.active .toggl__bar.third {
   transform: rotate(-45deg);
-  top: 16px;
+  top: 13px;
   left: 8px;
-  width: 75%;
+  width: 70%;
 }
 
 /* Entry Comments
