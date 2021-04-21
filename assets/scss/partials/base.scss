@@ -42,15 +42,15 @@ $sans-serif: 'Wotfard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, O
 $josefin: 'Josefin Sans';
 
 // Content
-$content-width: 768px;
-$block-margin: 20px;
+$content-width: 48rem;
+$block-margin: 1.25rem; // 20px
 $base-margin: 1.1rem;
 $border-radius: 10px;
 
 // Grid
 $grid: grid;
-$grid-width: 1200px;
-$grid-gap: 35px;
+$grid-width: 75rem;
+$grid-gap: 2rem;
 $wrap_edge: $base-margin * 1.25;
 $margin_2x: $base-margin * 2;
 $margin_4x: $base-margin * 4;
@@ -60,12 +60,12 @@ $logo_width: 185px;
 
 // Include Media Breakpoints
 $breakpoints: (
-  'phone' : 360px,
-  'small' : 600px,
-  'tablet' : 768px, // required for include-media
-  'mobile_menu' : 768px,
-  'medium' : 960px,
-  'large' : 1200px,
+  'phone' : 22.5rem,
+  'small' : 38rem,
+  'tablet' : 48rem, // required for include-media
+  'mobile_menu' : 48rem,
+  'medium' : 60rem,
+  'large' : $grid-width + $wrap_edge, // 1200px + site-inner paddin
   'desktop' : $grid-width + $grid-gap, // required for include-media
 );
 

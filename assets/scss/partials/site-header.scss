@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 85px;
+    height: 90px;
     background-color: $white;
     padding: 0 $wrap_edge;
     // border-bottom: 1px solid $grey_3;
@@ -23,7 +23,7 @@
     }
 
     &.shrink {
-        height: 50px;
+        height: 55px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
         .site-title a {
@@ -95,10 +95,20 @@
   --------------------------------------------- */
   
 .title-area {
-  position: relative;
-  z-index: 9; // make the site title,visible when menu is active
-  padding: 0;
-  max-width: $logo-width;
+    position: relative;
+    z-index: 9; // make the site title,visible when menu is active
+    padding: 0;
+    max-width: $logo-width;
+    @include transition;
+    overflow: hidden;
+
+    @include media('<=medium') {
+        max-width: 36px;
+
+        .shrink & {
+            max-width: 28px;
+        }
+    }
 }
 
 .site-title {

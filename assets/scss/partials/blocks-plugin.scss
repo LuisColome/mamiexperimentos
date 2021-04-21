@@ -65,6 +65,11 @@
 --------------------------------------------- */ 
 
 .entradas {
+    display: grid;
+    // grid-template-columns: 1fr;
+    gap: $grid-gap;
+    margin-bottom: $margin_2x;
+
     .entry-content & {
         margin: $margin_2x 0 $margin_4x;
     }
@@ -82,10 +87,6 @@
 --------------------------------------------- */ 
 
 .entradas {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $grid-gap;
-    margin-bottom: $margin_2x;
   
     .entrada__link {
         font-weight: 300;
@@ -93,15 +94,21 @@
         color: $grey_9;
     }
 
+    .entrada__title {
+        font-size: 1.42em;
+        font-weight: 600;
+        margin: .5em 0;
+    }
+
     .entrada__content {
         font-weight: 300;
     }
 }
   
-/* Grid de entradas
+/* Posts from "archive-grid" grid.
 --------------------------------------------- */
   
-  .entrada-grid {
+  .entrada.grid {
     border-radius: $border-radius;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08),0 2px 8px 0 rgba(0,0,0,0.12);
   
@@ -129,12 +136,7 @@
     .entrada__header {
         padding: 1.1rem;
     }
-
-    .entrada__title {
-        font-size: 1.42em;
-        font-weight: 600;
-        margin: .5em 0;
-    }
+    
 
     .entrada__content {
         font-size: .85em;
@@ -143,8 +145,50 @@
     }
 }
 
-/* Entradas del Blog.
+/* Posts from "archive-blog" grid.
 --------------------------------------------- */
+
+.entrada.blog {
+    display: flex;
+    flex-flow: row nowrap;
+
+
+
+    .entrada__img {
+        flex: 160px 1 0;
+        margin-right: $block-margin;
+    }
+
+    .entrada__title {
+        font-size: 1.45rem;
+        margin-top: 0;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .entrada__content {
+        font-size: 97%;
+    }
+
+    .read-more-link {
+        display: block;
+        margin-top: .5em;
+        text-decoration: none;
+
+        &::after {
+            content: '\279C';
+            font-size: .8em;
+            margin-left: .5em;
+            @include transition;
+        }
+
+        &:hover::after {
+            margin-left: 1em;
+        }
+    }
+}
   
   
   

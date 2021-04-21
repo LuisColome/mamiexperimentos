@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Support for MC4WP plugin.
 - White logo for header mobile navigation. 
+- Pagination styles.
+
+## [0.9.3] - 2021-19-04
+### Added
+- Support for posts partials, `archive-blog` and `archive-grid`.
+- Better support for transparent header on Home page.
+- Shrinking mobile nav header.
+
+### Change 
+- Better site logo support for mobile.  
 
 ## [0.9.2] - 2021-19-04
 ### Added

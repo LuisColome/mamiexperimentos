@@ -18,7 +18,7 @@ $img = genesis_get_image(
         )
     ));
 
-echo '<article class="entrada entrada-blog">';
+echo '<article class="entrada blog">';
     // echo '<a href="' . get_permalink() . '" class="entrada__link" tabindex="-1" aria-hidden="true">';
 
         echo '<header class="entrada__img">';
@@ -27,7 +27,7 @@ echo '<article class="entrada entrada-blog">';
         echo '<div class="entrada__container">';
             echo '<h2 class="entrada__title"><a href="' . get_permalink() . '" class="entrada__title__link">' . get_the_title() . '</a></h2>';
             echo '<p class="entrada__content">';
-                echo wp_trim_words( get_the_content(), 25, '...<a href="' . get_permalink() . '" class="read-more-link">Leer más</a>' );
+                echo wp_trim_words( get_the_content(), 22, '...<a href="' . get_permalink() . '" class="read-more-link" rel="nofollow">Leer más</a>' );
             echo '</p>';
         echo '</div>';
 

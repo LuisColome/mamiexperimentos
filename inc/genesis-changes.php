@@ -97,6 +97,17 @@ add_filter( 'genesis_search_form', 'ea_search_form' );
 }
 //add_filter( 'genesis_customizer_theme_settings_config', 'ea_disable_customizer_theme_settings' );
 
+/*  
+ * Display the featured image on single posts from blog.
+ * 
+ */
+function featured_post_image() {
+    if ( ! is_singular( 'post' ) )
+      return;
+      the_post_thumbnail('cfhh-featured-images');
+  }
+  add_action( 'genesis_entry_content', 'featured_post_image', 8 );
+
 /**
  * Modifies size of the Gravatar in the author box.
  *

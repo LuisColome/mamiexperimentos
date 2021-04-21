@@ -259,7 +259,39 @@
 	}
 }
 
-/* Nav Header with Site logo
+/* Home transpatent navigation styles within transpatent header
+-------------------------------------------------------------------- */
+
+.home .site-header:not(.shrink) {
+
+    .menu {
+
+        @include media('>=mobile_menu') {
+            & > .menu-item {
+        
+                > a {
+                    color: $white;
+                }
+            }
+            
+            .submenu-expand {
+
+                svg {
+                    fill: $white; // to fill the icon
+                }
+            }
+        }
+    }
+
+    .menu-toggle {
+
+        .toggl__bar {
+            background-color: $white;
+        }
+    }
+}
+
+/* Mobile navigation Header with Site logo
 --------------------------------------------- */
 
 .nav-header {
@@ -269,11 +301,16 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 75px;
+    height: 80px;
     padding-left: 20px;
     display: flex;
     align-items: center;
     background-color: $primary-color;
+    @include transition;
+
+    .shrink & {
+        height: 55px;
+    }
 
     a {
         display: block;
@@ -446,13 +483,6 @@
 		top: 12px;
 		}
 	}
-
-    .home .site-header:not(.shrink) & {
-
-        .toggl__bar {
-            background-color: $white;
-        }
-    }
 
 	&:hover,
 	&:focus,

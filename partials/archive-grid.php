@@ -18,7 +18,7 @@ $cat_array = explode(' ', $cat);
 $cat_first_word = $cat_array[0];
 $cat_second_word = $cat_array[1];
 
-echo '<article class="entrada entrada-grid">';
+echo '<article class="entrada grid">';
     echo '<a href="' . get_permalink() . '" class="entrada__link" tabindex="-1" aria-hidden="true">';
 
         echo '<div class="entrada__img" style="background: url(' . esc_url($image) . ') 50% 50% no-repeat;background-size:cover;">';
