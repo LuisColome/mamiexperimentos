@@ -108,9 +108,10 @@
 /* Posts from "archive-grid" grid.
 --------------------------------------------- */
   
-  .entrada.grid {
+.entrada.grid {
     border-radius: $border-radius;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08),0 2px 8px 0 rgba(0,0,0,0.12);
+    // box-shadow: 0 2px 5px 0 rgba(0,0,0,0.08),0 2px 8px 0 rgba(0,0,0,0.12);
+    box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.08), 0 2px 8px 0 rgba(0, 0, 0, 0.15);
   
     .entrada__img {
         position: relative;
@@ -136,7 +137,14 @@
     .entrada__header {
         padding: 1.1rem;
     }
+
+    .entrada__title a {
+        text-decoration: none;
+    }
     
+    .read-more-link {
+        font-weight: 400;
+    }
 
     .entrada__content {
         font-size: .85em;
@@ -151,8 +159,6 @@
 .entrada.blog {
     display: flex;
     flex-flow: row nowrap;
-
-
 
     .entrada__img {
         flex: 160px 1 0;

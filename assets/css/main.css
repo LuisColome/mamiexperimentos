@@ -1085,7 +1085,7 @@ img.aligncenter {
 --------------------------------------------- */
 .entrada.grid {
   border-radius: 10px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.08), 0 2px 8px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 5px 12px 0 rgba(0, 0, 0, 0.08), 0 2px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .entrada.grid .entrada__img {
   position: relative;
@@ -1105,6 +1105,12 @@ img.aligncenter {
 }
 .entrada.grid .entrada__header {
   padding: 1.1rem;
+}
+.entrada.grid .entrada__title a {
+  text-decoration: none;
+}
+.entrada.grid .read-more-link {
+  font-weight: 400;
 }
 .entrada.grid .entrada__content {
   font-size: 0.85em;

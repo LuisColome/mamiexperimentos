@@ -19,18 +19,14 @@ $cat_first_word = $cat_array[0];
 $cat_second_word = $cat_array[1];
 
 echo '<article class="entrada grid">';
-    echo '<a href="' . get_permalink() . '" class="entrada__link" tabindex="-1" aria-hidden="true">';
-
+    echo '<a href="' . get_permalink() . '" title="' . get_the_title() . '" class="entrada__link" tabindex="-1" aria-hidden="true" rel="nofollow">';
         echo '<div class="entrada__img" style="background: url(' . esc_url($image) . ') 50% 50% no-repeat;background-size:cover;">';
-            // echo '<span class="entrada__meta">'. $cat_first_word .'</span>'; 
         echo '</div>';
-
-        echo '<header class="entrada__header">';
-            // echo '<span class="entrada__meta">'. $cat .'</span>';
-            echo '<span class="entrada__meta">'. $cat_first_word .' ' . $cat_second_word .'</span>';
-            echo '<h2 class="entrada__title">' . get_the_title() . '</h2>';
-            echo '<p class="entrada__content">' . wp_trim_words( get_the_content(), 17, '...' ) . '</p>';
-        echo '</header>';
-
     echo '</a>';
+
+    echo '<header class="entrada__header">';
+        echo '<span class="entrada__meta">'. $cat_first_word .' ' . $cat_second_word .'</span>';
+        echo '<h2 class="entrada__title"><a href="' . get_permalink() . '" class="entrada__title__link">' . get_the_title() . '</a></h2>';
+        echo '<p class="entrada__content">' . wp_trim_words( get_the_content(), 20, '... <a href="' . get_permalink() . '" class="read-more-link" rel="nofollow">Leer más</a>' ) . '</p>';
+    echo '</header>';
 echo '</article>';
