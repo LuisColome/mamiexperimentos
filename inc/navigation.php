@@ -30,7 +30,7 @@ function ea_site_header() {
 	// }
 	echo '</nav>';
 
-	// echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( array( 'echo' => false ) ) . '</div>';
+	echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( array( 'echo' => false ) ) . '</div>';
 }
 add_action( 'genesis_header', 'ea_site_header', 11 );
 
@@ -58,13 +58,13 @@ function lcm_footer_menu() {
  */
 function ea_nav_extras( $menu, $args ) {
 
-	// if( 'primary' === $args->theme_location ) {
-	// 	$menu .= '<li class="menu-item search">' . ea_search_toggle() . '</li>';
-	// }
+	if( 'primary' === $args->theme_location ) {
+		$menu .= '<li class="menu-item search">' . ea_search_toggle() . '</li>';
+	}
 
-	// if( 'secondary' === $args->theme_location ) {
-	// 	$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
-	// }
+	if( 'secondary' === $args->theme_location ) {
+		$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
+	}
 
 	return $menu;
 }
@@ -74,14 +74,14 @@ add_filter( 'wp_nav_menu_items', 'ea_nav_extras', 10, 2 );
  * Search toggle
  *
  */
-// function ea_search_toggle() {
-// 	$output = '<button' . ea_amp_class( 'search-toggle', 'active', 'searchActive' ) . ea_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
-// 		$output .= ea_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
-// 		$output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
-// 		$output .= '<span class="screen-reader-text">Search</span>';
-// 	$output .= '</button>';
-// 	return $output;
-// }
+function ea_search_toggle() {
+	$output = '<button' . ea_amp_class( 'search-toggle', 'active', 'searchActive' ) . ea_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
+		$output .= ea_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
+		$output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+		$output .= '<span class="screen-reader-text">Search</span>';
+	$output .= '</button>';
+	return $output;
+}
 
 
 /**
@@ -92,6 +92,8 @@ function ea_mobile_menu_toggle() {
 	$output = '<button' . ea_amp_class( 'menu-toggle', 'active', 'menuActive' ) . ea_amp_toggle( 'menuActive', array( 'searchActive', 'mobileFollow' ) ) . '>';
 		// $output .= ea_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
 		// $output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+
+        // CSS hambuerguer menu instead of icons - https://codepen.io/luiscolome/pen/YzPKrpx
 		$output .= '<span class="toggl__bar first"></span><span class="toggl__bar second"></span><span class="toggl__bar third"></span>';
 		$output .= '<span class="screen-reader-text">Menu</span>';
 	$output .= '</button>';
