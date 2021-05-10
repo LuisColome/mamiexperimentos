@@ -28,9 +28,11 @@ function ea_site_header() {
 	// if( has_nav_menu( 'secondary' ) ) {
 	// 	wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
 	// }
+	echo '<div' . ea_amp_class( 'nav-search', 'mobile', 'searchActive' ) . '><div class="header-search__wrap">' . get_search_form( array( 'echo' => false ) ) . '</div></div>';
+
 	echo '</nav>';
 
-	echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( array( 'echo' => false ) ) . '</div>';
+	echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '><div class="header-search__wrap">' . get_search_form( array( 'echo' => false ) ) . '</div></div>';
 }
 add_action( 'genesis_header', 'ea_site_header', 11 );
 
@@ -76,8 +78,8 @@ add_filter( 'wp_nav_menu_items', 'ea_nav_extras', 10, 2 );
  */
 function ea_search_toggle() {
 	$output = '<button' . ea_amp_class( 'search-toggle', 'active', 'searchActive' ) . ea_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
-		$output .= ea_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
-		$output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+		$output .= ea_icon( array( 'icon' => 'search', 'size' => 18, 'class' => 'open' ) );
+		$output .= ea_icon( array( 'icon' => 'close', 'size' => 18, 'class' => 'close' ) );
 		$output .= '<span class="screen-reader-text">Search</span>';
 	$output .= '</button>';
 	return $output;

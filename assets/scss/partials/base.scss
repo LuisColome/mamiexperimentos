@@ -59,11 +59,11 @@ $logo_width: 185px;
 
 // Include Media Breakpoints
 $breakpoints: (
-  'phone' : 22.5rem,
-  'small' : 38rem,
-  'tablet' : 48rem, // required for include-media
+  'phone' : 22.5rem, // 360px
+  'small' : 38rem, // 600px
+  'tablet' : 48rem, // 768ps required for include-media
   'mobile_menu' : 48rem,
-  'medium' : 60rem,
+  'medium' : 60rem, // 960px
   'large' : $grid-width + $wrap_edge, // 1200px + site-inner paddin
   'desktop' : $grid-width + $grid-gap, // required for include-media
 );
