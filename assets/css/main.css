@@ -1928,7 +1928,7 @@ textarea:focus:-ms-input-placeholder {
   display: block;
   font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 1;
   padding: 11px 18px;
   margin-right: 5px;
   position: relative;
@@ -1984,7 +1984,7 @@ textarea:focus:-ms-input-placeholder {
   position: absolute;
   line-height: 0;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-35%);
   right: 5px;
 }
 .nav-menu .submenu-expand svg {
@@ -2120,6 +2120,10 @@ textarea:focus:-ms-input-placeholder {
 @media (min-width: 48rem) {
   .home .site-header:not(.shrink) .menu > .menu-item > a {
     color: #ffffff;
+  }
+  .home .site-header:not(.shrink) .menu > .menu-item:hover > a, .home .site-header:not(.shrink) .menu > .menu-item:hover svg {
+    color: #E97171;
+    fill: #E97171;
   }
   .home .site-header:not(.shrink) .menu .submenu-expand svg {
     fill: #ffffff;
