@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - White logo for header mobile navigation. 
 - Pagination styles.
 
+## [0.9.5] - 2021-10-05
+### Added
+- ACF resources custom block and styles to suppot it.
+- Search form on header.
+- Search icom (button) on header and fixed it.
+
 ## [0.9.4] - 2021-10-05
 ### Change
 - Fixed navigation styles
