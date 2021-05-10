@@ -27,7 +27,7 @@
 			display: block;
 			font-size: 16px;
 			font-weight: 400;
-			line-height: 22px;
+			line-height: 1.25;
 			padding: 11px 18px;
             margin-right: 5px;
 			position: relative;
@@ -90,7 +90,7 @@
 		position: absolute;
 		line-height: 0;
 		top: 50%;
-		transform: translateY(-50%);
+		transform: translateY(-35%);
 		right: 5px;
 
 		svg {
@@ -116,20 +116,20 @@
 		}
 	}
 
-	.nav-primary {
+	// .nav-primary {
 
-		.menu-item.search {
-			line-height: 0;
+	// 	.menu-item.search {
+	// 		line-height: 0;
 
-			button {
-				padding: 12px;
-			}
+	// 		button {
+	// 			padding: 12px;
+	// 		}
 
-			// @include media("<=mobile_menu") {
-			// 	display: none;
-			// }
-		}
-	}
+	// 		// @include media("<=mobile_menu") {
+	// 		// 	display: none;
+	// 		// }
+	// 	}
+	// }
 
 	@include media(">mobile_menu") {
 		// width: calc( 100% - #{$menu_width} );
@@ -272,9 +272,17 @@
                 > a {
                     color: $white;
                 }
+
+                &:hover > a,
+                &:hover svg {
+                    color: $primary-color;
+                    fill: $primary-color;
+                    @include transition;
+                }
             }
             
-            .submenu-expand {
+            .submenu-expand,
+            .search-toggle {
 
                 svg {
                     fill: $white; // to fill the icon
@@ -354,26 +362,28 @@
 }
 
 /* Toggles
---------------------------------------------- */
+----------------------------------------------------------------------------------- */
 
-.search-toggle,
-.menu-toggle {
+.search-toggle {
 
 	@include button-reset;
 	line-height: 0;
 	text-align: center;
+    padding: 17px 12px;
     z-index: 999;
+    animation: fadein .5s;
+    @include transition;
+
+    @include media('<=mobile_menu') {
+        display: none;
+    }
 
 	.close {
 		display: none;
 	}
 
-	&:hover,
 	&.active {
-		background: $grey_3;
-	}
-
-	&.active {
+        animation: fadein .5s;
 
 		.close {
 			display: inline;
@@ -385,63 +395,8 @@
 	}
 }
 
-.site-header .wrap {
-	@include media("<=mobile_menu") {
-		// padding: 0 48px;
-	}
 
-	& > .menu-toggle,
-	& > .search-toggle {
-		// position: absolute;
-		// top: 0;
-        width: 26px;
-        height: 18px;
-
-		@include media(">mobile_menu") {
-			display: none; // Only display the toggle menu on mobile.
-		}
-	}
-
-	// & > .menu-toggle {
-	// 	left: 0; // no effect with the father display flex.
-	// }
-
-	& > .search-toggle {
-		right: 0;
-	}
-}
-
-/* Header Search
---------------------------------------------- */
-
-.header-search {
-	background: $grey_3;
-	overflow: hidden;
-	padding: 16px;
-	width: 100%;
-
-	@include media(">=tablet") {
-		position: absolute;
-		bottom: -82px;
-		right: 0;
-
-		.search-form {
-			margin: 0 auto;
-		}
-	}
-
-	@include media("<=mobile_menu") {
-		margin: 0 -48px;
-		width: calc( 100% + 96px );
-	}
-
-	&:not(.active) {
-		display: none;
-	}
-}
-
-
-/* Toggles
+/* Menu Toggle
 --------------------------------------------- */
 
 // .search-toggle,  // no search box for WhiteRiverManor
@@ -450,13 +405,20 @@
 	@include button-reset;
     position: relative;
     display: block;
+    width: 26px;
+    height: 20px;
 	line-height: 0;
 	text-align: center;
 	order: 3;
+    z-index: 999;
 
-	.close {
-		display: none;
-	}
+    @include media(">mobile_menu") {
+        display: none; // Only display the toggle menu on mobile.
+    }
+
+	// .close {
+	// 	display: none;
+	// }
 	
 	.toggl__bar {
 		display: block;
@@ -476,11 +438,11 @@
 		}
 
 		&.second {
-		top: 6px;
+		top: 7px;
 		}
 
 		&.third {
-		top: 12px;
+		top: 14px;
 		}
 	}
 

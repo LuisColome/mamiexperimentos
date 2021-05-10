@@ -28,9 +28,11 @@ function ea_site_header() {
 	// if( has_nav_menu( 'secondary' ) ) {
 	// 	wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
 	// }
+	echo '<div' . ea_amp_class( 'nav-search', 'mobile', 'searchActive' ) . '><div class="header-search__wrap">' . get_search_form( array( 'echo' => false ) ) . '</div></div>';
+
 	echo '</nav>';
 
-	// echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '>' . get_search_form( array( 'echo' => false ) ) . '</div>';
+	echo '<div' . ea_amp_class( 'header-search', 'active', 'searchActive' ) . '><div class="header-search__wrap">' . get_search_form( array( 'echo' => false ) ) . '</div></div>';
 }
 add_action( 'genesis_header', 'ea_site_header', 11 );
 
@@ -58,13 +60,13 @@ function lcm_footer_menu() {
  */
 function ea_nav_extras( $menu, $args ) {
 
-	// if( 'primary' === $args->theme_location ) {
-	// 	$menu .= '<li class="menu-item search">' . ea_search_toggle() . '</li>';
-	// }
+	if( 'primary' === $args->theme_location ) {
+		$menu .= '<li class="menu-item search">' . ea_search_toggle() . '</li>';
+	}
 
-	// if( 'secondary' === $args->theme_location ) {
-	// 	$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
-	// }
+	if( 'secondary' === $args->theme_location ) {
+		$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
+	}
 
 	return $menu;
 }
@@ -74,14 +76,14 @@ add_filter( 'wp_nav_menu_items', 'ea_nav_extras', 10, 2 );
  * Search toggle
  *
  */
-// function ea_search_toggle() {
-// 	$output = '<button' . ea_amp_class( 'search-toggle', 'active', 'searchActive' ) . ea_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
-// 		$output .= ea_icon( array( 'icon' => 'search', 'size' => 24, 'class' => 'open' ) );
-// 		$output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
-// 		$output .= '<span class="screen-reader-text">Search</span>';
-// 	$output .= '</button>';
-// 	return $output;
-// }
+function ea_search_toggle() {
+	$output = '<button' . ea_amp_class( 'search-toggle', 'active', 'searchActive' ) . ea_amp_toggle( 'searchActive', array( 'menuActive', 'mobileFollow' ) ) . '>';
+		$output .= ea_icon( array( 'icon' => 'search', 'size' => 18, 'class' => 'open' ) );
+		$output .= ea_icon( array( 'icon' => 'close', 'size' => 18, 'class' => 'close' ) );
+		$output .= '<span class="screen-reader-text">Search</span>';
+	$output .= '</button>';
+	return $output;
+}
 
 
 /**
@@ -92,6 +94,8 @@ function ea_mobile_menu_toggle() {
 	$output = '<button' . ea_amp_class( 'menu-toggle', 'active', 'menuActive' ) . ea_amp_toggle( 'menuActive', array( 'searchActive', 'mobileFollow' ) ) . '>';
 		// $output .= ea_icon( array( 'icon' => 'menu', 'size' => 24, 'class' => 'open' ) );
 		// $output .= ea_icon( array( 'icon' => 'close', 'size' => 24, 'class' => 'close' ) );
+
+        // CSS hambuerguer menu instead of icons - https://codepen.io/luiscolome/pen/YzPKrpx
 		$output .= '<span class="toggl__bar first"></span><span class="toggl__bar second"></span><span class="toggl__bar third"></span>';
 		$output .= '<span class="screen-reader-text">Menu</span>';
 	$output .= '</button>';
@@ -117,7 +121,7 @@ function ea_nav_add_dropdown_icons( $output, $item, $depth, $args ) {
 	if ( in_array( 'menu-item-has-children', $item->classes, true ) ) {
 
 		// Add SVG icon to parent items.
-		$icon = ea_icon( array( 'icon' => 'chevron-bottom', 'size' => 10, 'title' => 'Submenu Dropdown' ) );
+		$icon = ea_icon( array( 'icon' => 'chevron-bottom', 'size' => 14, 'title' => 'Submenu Dropdown' ) );
 
 		$output .= sprintf(
 			'<button' . ea_amp_nav_dropdown( $args->theme_location, $depth ) . ' tabindex="-1">%s</button>',

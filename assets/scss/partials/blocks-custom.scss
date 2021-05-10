@@ -1,0 +1,71 @@
+// Custom Blocks
+
+/* recursos - $ columns custom block for home page. 
+----------------------------------------------------------------------- */
+
+.recursos-block{
+    
+    @include media('<=small') {
+        padding: 0 12px;
+    }
+
+    .recursos-block__columns {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: $grid-gap;
+        max-width: 532px;
+        margin: $block-margin auto;
+
+        @include media('>=tablet') {
+            max-width: 670px;
+        }
+
+        @include media('>=1020px') {
+            max-width: 100%;
+        }
+    }
+
+    .recursos-block__column__inner{
+        height: 350px;
+        border-radius: $border-radius;
+        position: relative;
+        overflow: hidden;
+
+        @include media('>=tablet') {
+            height: 450px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 200px;
+            bottom: 0;
+            opacity: .9;
+            background: linear-gradient(to top, rgba(4,4,4,0.55), rgba(1,1,1,0));
+            z-index: 5;
+        }
+    }
+    .recursos-block__image {
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+    }
+
+    .recursos-block__title {
+        font-family: $josefin, $sans-serif;
+        font-weight: 700;
+        @include font-sizes(17px, 18px);
+        color: $white;
+        margin: 0 auto;
+        margin-top: -44px;
+        text-align: left;
+        position: absolute;
+        padding: 0 0 10px 25px;
+        z-index: 50;
+    }
+}
+

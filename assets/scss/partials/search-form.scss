@@ -1,27 +1,92 @@
+// Search Form
 
 /* Search Form
 --------------------------------------------- */
 
+/* Header Search
+--------------------------------------------- */
+
+.header-search {
+    position: relative;
+	background: $grey_3;
+	overflow: hidden;
+	padding: 16px;
+	width: 100%;
+
+    .search-form {
+        border: 1px solid $border-color;
+        max-width: 400px;
+        position: relative;
+        overflow: hidden;
+    }
+
+	@include media(">=tablet") {
+		position: absolute;
+        bottom: -82px;
+        left: 50%;
+        max-width: 1200px;
+        transform: translateX(-50%);
+	}
+
+	@include media("<=mobile_menu") {
+		margin: 0 -48px;
+		width: calc( 100% + 96px );
+	}
+
+    &:not(.active) {
+        display: none;
+    }
+}
+
+.nav-search {
+
+    @include media('>=mobile_menu') {
+        display: none;
+    }
+
+    .search-form {
+        border: 1px solid $border-color;
+        max-width: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: $border-radius;
+        margin-top: $block-margin;
+    }
+}
+
+
 .search-form {
-    overflow: hidden;
-  }
-  
-  .entry-content .search-form {
-    margin-bottom: 40px;
-    width: 50%;
-  }
-  
-  .post-password-form input[type="submit"],
-  .search-form input[type="submit"] {
-    margin-top: 10px;
-  }
-  
-  .widget_search input[type="submit"] {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-  }
+	
+
+	.search-field {
+		border: none;
+		padding-right: 44px;
+		width: 100%;
+	}
+
+	.search-submit {
+		background: transparent;
+		border: none;
+		padding: 0;
+		margin: 0;
+		min-width: 0;
+		width: 44px;
+		height: 44px;
+		line-height: 0;
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		margin-top: -22px;
+		right: 0;
+
+		svg {
+			fill: $grey_7;
+			@include icon-position( 20px );
+
+			&:hover {
+				fill: $highlight;
+			}
+		}
+
+	}
+}

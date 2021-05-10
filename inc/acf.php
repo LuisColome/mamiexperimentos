@@ -50,6 +50,17 @@ class BE_ACF_Customizations {
 		if( ! function_exists('acf_register_block_type') )
 			return;
 
+        // Register a resources block.
+        acf_register_block_type(array(
+            'name'              => 'resources',
+            'title'             => __('Recursos'),
+            'description'       => __('A custom resources gallery block.'),
+            'icon' 				=> 'screenoptions',
+            'keywords' 			=> array('columns', 'images', 'subpages', 'pages', 'gallery', 'resources'),
+            'render_template'   => 'partials/blocks/recursos/recursos.php',
+            'category'          => 'media',
+        ));
+
 	}
 }
 new BE_ACF_Customizations();
