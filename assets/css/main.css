@@ -1534,21 +1534,41 @@ textarea:focus:-ms-input-placeholder {
 --------------------------------------------- */
 .header-search {
   position: relative;
-  background: #eeeeee;
-  overflow: hidden;
-  padding: 16px;
+  background: transparent;
+  padding: 2px 10px;
   width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0.2xs linear, opacity 0.2s linear;
+}
+.header-search.active {
+  opacity: 1;
+  visibility: visible;
+}
+.header-search__wrap {
+  display: flex;
+  justify-content: flex-end;
 }
 .header-search .search-form {
-  border: 1px solid #e0e0e0;
+  flex: 440px 0 1;
+  box-shadow: 0 3px 16px rgba(0, 0, 0, 0.048), 0 4px 22px rgba(0, 0, 0, 0.047), 0 5px 22px rgba(0, 0, 0, 0.08);
   max-width: 400px;
   position: relative;
-  overflow: hidden;
+  outline: none;
+  border-radius: 10px;
+}
+.header-search .search-form input.search-field {
+  border-radius: 10px;
+  padding-right: 44px;
+  width: 100%;
+}
+.header-search .search-form input.search-field:focus {
+  outline: 2px solid #E97171;
 }
 @media (min-width: 48rem) {
   .header-search {
     position: absolute;
-    bottom: -82px;
+    bottom: -50px;
     left: 50%;
     max-width: 1200px;
     transform: translateX(-50%);
@@ -1556,12 +1576,8 @@ textarea:focus:-ms-input-placeholder {
 }
 @media (max-width: 48rem) {
   .header-search {
-    margin: 0 -48px;
-    width: calc( 100% + 96px );
+    display: none;
   }
-}
-.header-search:not(.active) {
-  display: none;
 }
 
 @media (min-width: 48rem) {
@@ -1577,12 +1593,13 @@ textarea:focus:-ms-input-placeholder {
   border-radius: 10px;
   margin-top: 1.25rem;
 }
-
-.search-form .search-field {
-  border: none;
-  padding-right: 44px;
-  width: 100%;
+.nav-search .search-form input.search-field {
+  border-radius: 10px;
 }
+.nav-search .search-form input.search-field:focus {
+  outline: 2px solid #E97171;
+}
+
 .search-form .search-submit {
   background: transparent;
   border: none;
@@ -2302,23 +2319,34 @@ textarea:focus:-ms-input-placeholder {
   z-index: 999;
   animation: fadein 0.5s;
   transition: all 0.2s ease-in-out;
+  animation: fadein 0.5s;
 }
 @media (max-width: 48rem) {
   .search-toggle {
     display: none;
   }
 }
-.search-toggle .close {
-  display: none;
+.search-toggle .close,
+.search-toggle .open {
+  position: absolute;
+  display: block;
+  transition: opacity 0.25s ease-in-out;
 }
-.search-toggle.active {
-  animation: fadein 0.5s;
+.search-toggle .close {
+  opacity: 0;
+  visibility: hidden;
+}
+.search-toggle .open {
+  opacity: 1;
+  visibility: visible;
 }
 .search-toggle.active .close {
-  display: inline;
+  opacity: 1;
+  visibility: visible;
 }
 .search-toggle.active .open {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* Menu Toggle
