@@ -209,8 +209,8 @@ add_action( 'genesis_setup', 'ea_child_theme_setup', 15 );
  * @return array
  */
 function ea_comment_text( $args ) {
-	$args['title_reply']          = __( 'Leave A Comment', 'lcm_mamiexperimentos' );
-	$args['label_submit']         = __( 'Post Comment',  'lcm_mamiexperimentos' );
+	$args['title_reply']          = __( 'Deja un comentario', 'lcm_mamiexperimentos' );
+	$args['label_submit']         = __( 'Publicar',  'lcm_mamiexperimentos' );
 	$args['comment_notes_before'] = '';
 	$args['comment_notes_after']  = '';
 	return $args;

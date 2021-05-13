@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - White logo for header mobile navigation. 
 - Pagination styles.
 
+## [0.9.6] - 2021-13-05
+### Added
+- Post meta and post info styles.
+- Fix header search form styles.
+
+### Change
+- Translate the Comment title and comments button text. 
+
 ## [0.9.5] - 2021-10-05
 ### Added
 - ACF resources custom block and styles to suppot it.

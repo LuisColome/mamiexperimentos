@@ -371,26 +371,39 @@
 	text-align: center;
     padding: 17px 12px;
     z-index: 999;
-    animation: fadein .5s;
     @include transition;
 
     @include media('<=mobile_menu') {
         display: none;
     }
 
+    .close,
+    .open {
+        position: absolute;
+		display: block;
+        transition: opacity .25s ease-in-out;
+    }
+
 	.close {
-		display: none;
+        opacity: 0;
+        visibility: hidden;
 	}
 
+    .open {
+        opacity: 1;
+        visibility: visible;
+    }
+
 	&.active {
-        animation: fadein .5s;
 
 		.close {
-			display: inline;
+            opacity: 1;
+            visibility: visible;
 		}
 
 		.open {
-			display: none;
+            opacity: 0;
+            visibility: hidden;
 		}
 	}
 }
