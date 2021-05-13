@@ -223,35 +223,35 @@ template {
 
 @font-face {
   font-family: "Wotfard";
-  src: url("http://localhost/mmx/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-light-webfont.woff2") format("woff2");
+  src: url("/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-light-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: optional;
 }
 @font-face {
   font-family: "Wotfard";
-  src: url("http://localhost/mmx/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-regular-webfont.woff2") format("woff2");
+  src: url("/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-regular-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: optional;
 }
 @font-face {
   font-family: "Wotfard";
-  src: url("http://localhost/mmx/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-medium-webfont.woff2") format("woff2");
+  src: url("/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-medium-webfont.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: optional;
 }
 @font-face {
   font-family: "Wotfard";
-  src: url("http://localhost/mmx/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-lightitalic-webfont.woff2") format("woff2");
+  src: url("/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-lightitalic-webfont.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
   font-display: optional;
 }
 @font-face {
   font-family: "Wotfard";
-  src: url("http://localhost/mmx/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-regularitalic-webfont.woff2") format("woff2");
+  src: url("/wp-content/themes/mamiexperimentos/assets/fonts/wotfard-regularitalic-webfont.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: optional;
@@ -395,12 +395,10 @@ p {
 
 .has-large-font-size {
   font-size: 1.25rem;
-  font-weight: 400;
 }
 
 .has-huge-font-size {
   font-size: 1.5rem;
-  font-weight: 400;
 }
 
 /* Headings
@@ -453,6 +451,14 @@ h5:focus,
 h6:focus {
   outline: none;
 }
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+  font-weight: 700;
+}
 h1.green-line,
 h2.green-line,
 h3.green-line,
@@ -496,12 +502,12 @@ h2 {
 }
 @media (min-width: 48rem) {
   h2 {
-    font-size: 2.23rem;
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 60rem) {
   h2 {
-    font-size: 2.55rem;
+    font-size: 2.38rem;
   }
 }
 
@@ -2317,9 +2323,7 @@ textarea:focus:-ms-input-placeholder {
   text-align: center;
   padding: 17px 12px;
   z-index: 999;
-  animation: fadein 0.5s;
   transition: all 0.2s ease-in-out;
-  animation: fadein 0.5s;
 }
 @media (max-width: 48rem) {
   .search-toggle {

@@ -88,12 +88,10 @@ p {
 
 .has-large-font-size {
     font-size: 1.25rem;
-    font-weight: 400;
 }
 
 .has-huge-font-size {
     font-size: 1.5rem;
-    font-weight: 400;
 }
 
 /* Headings
@@ -120,13 +118,17 @@ h6 {
         color: $grey-9;
 
         &:hover {
-            color: $primary-color;;
+            color: $primary-color;
             text-decoration: none;
         }
     }
 
     &:focus {
         outline: none;
+    }
+
+    strong {
+        font-weight: 700; // fix the default for Wotfard typo.
     }
 
     /* Green line
@@ -152,7 +154,7 @@ h1 {
 }
 
 h2 {
-  @include font-sizes(1.95rem, 2.23rem, 2.55rem);
+  @include font-sizes(1.95rem, 2.2rem, 2.38rem);
 }
 
 h3 {
