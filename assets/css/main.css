@@ -498,16 +498,16 @@ h1 {
 }
 
 h2 {
-  font-size: 1.95rem;
+  font-size: 1.75rem;
 }
 @media (min-width: 48rem) {
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 60rem) {
   h2 {
-    font-size: 2.38rem;
+    font-size: 2.12rem;
   }
 }
 
@@ -2432,6 +2432,10 @@ textarea:focus:-ms-input-placeholder {
 
 /* Entry Comments
 --------------------------------------------- */
+.comment-respond {
+  margin-top: 4.4rem;
+}
+
 .comment-respond,
 .entry-comments,
 .entry-pings {
@@ -2665,20 +2669,52 @@ textarea:focus:-ms-input-placeholder {
   margin-bottom: 0;
 }
 .entry-header .entry-meta {
+  font-style: italic;
+  font-size: 90%;
+  font-weight: 400;
+  color: #bdbdbd;
   margin-bottom: 20px;
+}
+.entry-header .entry-meta a {
+  color: inherit;
+  -webkit-text-decoration-color: inherit;
+          text-decoration-color: inherit;
 }
 .entry-footer .entry-meta {
   border-top: 1px solid #eeeeee;
-  padding-top: 20px;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
 }
-.entry-meta .entry-comments-link::before {
-  content: "—";
-  margin: 0 6px 0 2px;
+.entry-meta .entry-author,
+.entry-meta .entry-time {
+  margin-right: 14px;
+}
+.entry-meta .entry-author::after,
+.entry-meta .entry-time::after {
+  content: "/";
+  right: -7px;
+  position: relative;
 }
 
-.entry-categories,
 .entry-tags {
-  display: block;
+  display: flex;
+  flex-flow: row wrap;
+}
+.entry-tags a {
+  line-height: 1.4;
+  font-weight: 400;
+  padding: 0.25ch 1.25ch;
+  margin: 0 6px 6px 0;
+  background-color: transparent;
+  text-decoration: none;
+  color: #414243;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+}
+.entry-tags a:hover {
+  color: #ffffff;
+  background-color: #e24545;
+  border-color: #e24545;
 }
 
 .breadcrumb {

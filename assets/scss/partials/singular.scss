@@ -149,23 +149,63 @@
 	margin-bottom: 0;
 
 	.entry-header & {
+        font-style: italic;
+        font-size: 90%;
+        font-weight: 400;;
+        color: $grey_5;
 		margin-bottom: 20px;
+
+        // reset all link styles on entry header.
+        a {
+            color: inherit;
+            text-decoration-color: inherit;
+        }
 	}
 
 	.entry-footer & {
 		border-top: 1px solid $grey_3;
-		padding-top: 20px;
+		padding-top: $block-margin;
+        margin-top: $block-margin;
 	}
 
-	.entry-comments-link::before {
-		content: "\2014";
-		margin: 0 6px 0 2px;
-	}
+	// .entry-comments-link::before {
+	// 	content: "\2014";
+	// 	margin: 0 6px 0 2px;
+	// }
+
+    .entry-author,
+    .entry-time {
+        margin-right: 14px;
+
+        &::after {
+            content: "/";
+            right: -7px;
+            position: relative;
+        }
+    }
 } 
   
-.entry-categories,
 .entry-tags {
-	display: block;
+	display: flex;
+    flex-flow: row wrap;
+    
+    a {
+        line-height: 1.4;
+        font-weight: 400;
+        padding: .25ch 1.25ch;
+        margin: 0 6px 6px 0;
+        background-color: transparent;
+        text-decoration: none;
+        color: $base-color;
+        border-radius: $border-radius;
+        border: 1px solid $grey_4;
+
+        &:hover {
+            color: $white;
+            background-color: $highlight;
+            border-color: $highlight;
+        }
+    }
 }
 
 
