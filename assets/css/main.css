@@ -401,6 +401,10 @@ p {
   font-size: 1.5rem;
 }
 
+.mmx-subtitle {
+  font-weight: 400;
+}
+
 /* Headings
 --------------------------------------------- */
 h1,
