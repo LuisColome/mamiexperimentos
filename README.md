@@ -2,6 +2,8 @@
 
 [![MamiExperimentos Genesis Child Theme v0.9.7 badge][changelog-badge]][changelog] [![Version v0.9.7 Badge][version-badge]][changelog]
 
+![MamiExperimentos Logo](logo.png)
+
 ## Author:
 
 Luis Colomé ( [@luiscolome](https://twitter.com/luiscolome) / [luiscolome.com](https://luiscolome.com) )
