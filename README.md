@@ -2,7 +2,7 @@
 
 [![MamiExperimentos Genesis Child Theme v0.9.7 badge][changelog-badge]][changelog] [![Version v0.9.7 Badge][version-badge]][changelog]
 
-![MamiExperimentos Logo](logo.png)
+![MamiExperimentos Logo](images/logo.png)
 
 ## Author:
 
@@ -38,3 +38,4 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 [changelog]: ./CHANGELOG.md
 [changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v0.9.7-orange
 [version-badge]: https://img.shields.io/badge/version-v0.9.7-blue
+[last-commit-badge]: https://img.shields.io/github/last-commit/LuisColome/mamiexperimentos?color=green
