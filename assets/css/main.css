@@ -1846,14 +1846,14 @@ textarea:focus:-ms-input-placeholder {
   }
 }
 
-/* Entry Navigation
+/* Pagination
 --------------------------------------------- */
 .pagination {
   grid-column: 1/-1;
   border-top: 1px solid #e0e0e0;
   font-size: 16px;
   text-align: center;
-  padding-top: 22px;
+  padding-top: 2.2rem;
   margin-top: 1.25rem;
 }
 .pagination ul {
@@ -1865,25 +1865,25 @@ textarea:focus:-ms-input-placeholder {
 }
 .pagination ul li a {
   color: #414243;
-  border-radius: 50%;
+  background-color: #e0e0e0;
+  border-radius: 5px;
   display: block;
-  font-weight: 400;
+  font-weight: 300;
   text-decoration: none;
-  width: 29px;
-  height: 29px;
-  line-height: 30px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
   text-align: center;
+  margin: 0 3px;
 }
 .pagination ul li.pagination-next a, .pagination ul li.pagination-previous a {
-  width: auto;
+  width: max-content;
+  padding: 0 1rem;
+  margin: 0 2rem;
 }
-.pagination ul li:hover > a {
-  color: #e24545;
-}
-.pagination ul li.active > a {
+.pagination ul li:hover > a, .pagination ul li.active > a {
   background: #e24545;
   color: #ffffff;
-  font-weight: 700;
 }
 
 /* Site Header
