@@ -1190,34 +1190,44 @@ img.aligncenter {
   margin-top: 0;
 }
 
-/* Entry Meta
+/* Entry Title
 --------------------------------------------- */
-.entry-author {
-  font-size: 14px;
+.single .entry-title {
+  position: relative;
+  font-size: 1.75rem;
+  margin-bottom: 2.2rem;
 }
-.entry-author .avatar {
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 4px;
+@media (min-width: 48rem) {
+  .single .entry-title {
+    font-size: 2rem;
+  }
 }
-.entry-author a {
-  color: #E97171;
-  text-decoration: none;
+@media (min-width: 60rem) {
+  .single .entry-title {
+    font-size: 2.3rem;
+  }
 }
-.entry-author a:hover {
-  color: #e24545;
+.single .entry-title::after {
+  background: #73A3A5;
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateY(1rem);
 }
 
-.entry-meta {
-  font-size: 16px;
-  margin-bottom: 0;
-}
+/* Entry Meta
+--------------------------------------------- */
 .entry-header .entry-meta {
+  font-size: 16.2px;
+  margin-bottom: 0;
   font-style: italic;
   font-size: 90%;
   font-weight: 400;
-  color: #bdbdbd;
+  color: #73A3A5;
   margin-bottom: 20px;
 }
 .entry-header .entry-meta a {
@@ -1225,20 +1235,42 @@ img.aligncenter {
   -webkit-text-decoration-color: inherit;
           text-decoration-color: inherit;
 }
-.entry-footer .entry-meta {
+.entry-header .entry-meta a:hover {
+  text-decoration: none;
+}
+.entry-header .entry-time,
+.entry-header .entry-author,
+.entry-header .entry-categories {
+  position: relative;
+  padding-left: 25px;
+  margin-right: 1rem;
+}
+.entry-header .entry-time::before,
+.entry-header .entry-author::before,
+.entry-header .entry-categories::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(/wp-content/themes/mamiexperimentos/assets/icons/utility/calendar.svg) no-repeat 50% 50%;
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+}
+.entry-header .entry-categories::before {
+  background: url(/wp-content/themes/mamiexperimentos/assets/icons/utility/category.svg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.entry-header .entry-author::before {
+  background: url(/wp-content/themes/mamiexperimentos/assets/icons/utility/user.svg) no-repeat 50% 50%;
+  background-size: cover;
+}
+.entry-footer .entry-header {
   border-top: 1px solid #eeeeee;
   padding-top: 1.25rem;
   margin-top: 1.25rem;
-}
-.entry-meta .entry-author,
-.entry-meta .entry-time {
-  margin-right: 14px;
-}
-.entry-meta .entry-author::after,
-.entry-meta .entry-time::after {
-  content: "/";
-  right: -7px;
-  position: relative;
 }
 
 .entry-tags {
