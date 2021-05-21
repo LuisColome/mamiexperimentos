@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - White logo for header mobile navigation. 
 - Pagination styles.
 
+## [0.9.8] - 2021-21-05
+### Added
+- Styles for the Post info.
+- Post info icons.
+- Entry title decoration.
+
 ## [0.9.7] - 2021-19-05
 ### Change
 - Pagination Styles according to the design. 
