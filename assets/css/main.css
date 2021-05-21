@@ -994,7 +994,7 @@ img.aligncenter {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.22), 0 2px 10px 0 rgba(0, 0, 0, 0.18);
 }
 .recursos-block .recursos-block__column__inner:hover .recursos-block__title {
-  transform: translateY(-22px) translateX(20px);
+  transform: translateY(-19px) translateX(20px);
 }
 @media (min-width: 48rem) {
   .recursos-block .recursos-block__column__inner {

@@ -34,9 +34,10 @@
         // box-shadow: 0 0.4px 2.3px rgba(0, 0, 0, 0.093), 0 1.3px 5.1px rgba(0, 0, 0, 0.067), 0 6px 17px rgba(0, 0, 0, 0.12);
 
         &:hover {
+            
             // Small effect on hover for the title
             .recursos-block__title {
-                transform: translateY(-22px) translateX(20px);
+                transform: translateY(-19px) translateX(20px);
             }
         }
 
