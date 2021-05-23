@@ -87,14 +87,14 @@ add_filter( 'genesis_search_form', 'ea_search_form' );
  * Disable customizer theme settings
  *
  */
- function ea_disable_customizer_theme_settings( $config ) {
-	// $remove = [ 'genesis_header', 'genesis_single', 'genesis_archives', 'genesis_footer' ];
-	$remove = [ 'genesis_footer' ];
-	foreach( $remove as $item ) {
-		unset( $config['genesis']['sections'][ $item ] );
-	}
-	return $config;
-}
+//  function ea_disable_customizer_theme_settings( $config ) {
+// 	// $remove = [ 'genesis_header', 'genesis_single', 'genesis_archives', 'genesis_footer' ];
+// 	$remove = [ 'genesis_footer' ];
+// 	foreach( $remove as $item ) {
+// 		unset( $config['genesis']['sections'][ $item ] );
+// 	}
+// 	return $config;
+// }
 //add_filter( 'genesis_customizer_theme_settings_config', 'ea_disable_customizer_theme_settings' );
 
 /*  
@@ -138,6 +138,34 @@ function genesis_sample_comments_gravatar( $args ) {
 
 }
 add_filter( 'genesis_comment_list_args', 'genesis_sample_comments_gravatar' );
+
+/**
+ * Elimina el "Dice" de los comentarios.
+ * @link https://mundogenesis.com/tutoriales-genesis/elminar-el-dicede-los-comentarios-en-genesis/
+ */
+function lcm_remove_comment_says_text() {
+    return ' ';
+}
+add_filter( 'comment_author_says_text', 'lcm_remove_comment_says_text' );
+
+/**
+ * Remove time from comments.
+ * @link https://robincornett.com/remove-comment-time-genesis/
+ * @return string
+ */
+function lcm_remove_comment_time() {
+	return get_comment_date();
+}
+add_filter( 'genesis_markup_comment-time-link_content', 'lcm_remove_comment_time' );
+
+/**
+ * Fechas relativas en los comentarios
+ * @link https://www.revood.com/relative-dates-for-posts-and-comments-in-wordpress/
+ */
+function human_get_the_date ($date) {
+    return 'hace ' . human_time_diff( strtotime( $date ) );
+}
+add_filter( 'get_comment_date', 'human_get_the_date' ); 
 
 /**
  * Adds body classes to help with block styling.
