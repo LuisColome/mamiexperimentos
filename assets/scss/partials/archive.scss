@@ -99,6 +99,7 @@
 		margin-bottom: 0;
 	}
 
+    // Archive Title & decoration
 	.archive-title {
         position: relative;
         @include font-sizes(1.75rem, 2rem, 2.3rem);
@@ -117,12 +118,10 @@
         }
     }
 
-    p { // Archive description
-        // font-size: 1.25rem;
-        // font-style: italic;
-        // font-weight: 500;
-        color: $secondary-color;
+    // Archive description
+    p { 
         font: italic 500 1.25rem $sans-serif;
+        color: $secondary-color;
     }
 
 }

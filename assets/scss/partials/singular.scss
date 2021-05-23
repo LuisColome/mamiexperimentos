@@ -123,11 +123,13 @@
 
 /* Entry Title
 --------------------------------------------- */
-.single {
+.single,
+.page {
+
     .entry-title {
         position: relative;
         @include font-sizes(1.75rem, 2rem, 2.3rem);
-        margin-bottom: 2.2rem;
+        margin-bottom: $margin_4x;
 
         &::after {
             background: #73A3A5;
