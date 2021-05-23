@@ -146,26 +146,6 @@
 /* Entry Meta
 --------------------------------------------- */
 
-// .entry-author {
-// 	font-size: 14px;
-
-// 	.avatar {
-// 		border-radius: 50%;
-// 		display: inline-block;
-// 		vertical-align: middle;
-// 		margin-right: 4px;
-// 	}
-
-// 	a {
-// 		color:$primary-color;
-// 		text-decoration: none;
-
-// 		&:hover {
-// 			color: $highlight;
-// 		}
-// 	}
-// }
-
 .entry-header {
 
 	.entry-meta {
@@ -224,17 +204,6 @@
             background-size: cover;
         }
     }
-
-    // .entry-author,
-    // .entry-time {
-    //     margin-right: 14px;
-
-    //     &::after {
-    //         content: "/";
-    //         right: -7px;
-    //         position: relative;
-    //     }
-    // }
 
 	.entry-footer & {
 		border-top: 1px solid $grey_3;

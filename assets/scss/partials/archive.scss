@@ -1,13 +1,13 @@
-// Start using @use
-@use '../vendor' as v;
-
 // Archive 
 @import "base";
+@import "../vendor/include-media.scss";
 
 
 .archive .site-main {
     margin-bottom: $margin_4x;
 }
+
+
 
 
 /* Archive Styles (based on partials). 
@@ -92,18 +92,38 @@
 --------------------------------------------- */
 
 .archive-description {
-	text-align: center;
 	width: 100%;
-	max-width: $content-width;
-	margin: 0 auto $grid-gap;
+	margin: 0 auto $margin_4x;
 
 	& > *:last-child {
 		margin-bottom: 0;
 	}
 
-	.search-form {
-		margin: 0 auto;
-	}
+	.archive-title {
+        position: relative;
+        @include font-sizes(1.75rem, 2rem, 2.3rem);
+        margin-bottom: 2.2rem;
+
+        &::after {
+            background: #73A3A5;
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateY(1rem);
+        }
+    }
+
+    p { // Archive description
+        // font-size: 1.25rem;
+        // font-style: italic;
+        // font-weight: 500;
+        color: $secondary-color;
+        font: italic 500 1.25rem $sans-serif;
+    }
 
 }
 
