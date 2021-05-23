@@ -123,8 +123,7 @@
 
 /* Entry Title
 --------------------------------------------- */
-.single,
-.page {
+.singular {
 
     .entry-title {
         position: relative;
@@ -142,6 +141,14 @@
             left: 0;
             transform: translateY(1rem);
         }
+    }
+}
+
+// Fix botton space for single post with post info
+.single.singular {
+
+    .entry-title {
+        margin-bottom: 2.2rem;
     }
 }
 

@@ -1192,26 +1192,22 @@ img.aligncenter {
 
 /* Entry Title
 --------------------------------------------- */
-.single .entry-title,
-.page .entry-title {
+.singular .entry-title {
   position: relative;
   font-size: 1.75rem;
   margin-bottom: 4.4rem;
 }
 @media (min-width: 48rem) {
-  .single .entry-title,
-.page .entry-title {
+  .singular .entry-title {
     font-size: 2rem;
   }
 }
 @media (min-width: 60rem) {
-  .single .entry-title,
-.page .entry-title {
+  .singular .entry-title {
     font-size: 2.3rem;
   }
 }
-.single .entry-title::after,
-.page .entry-title::after {
+.singular .entry-title::after {
   background: #73A3A5;
   content: "";
   display: block;
@@ -1221,6 +1217,10 @@ img.aligncenter {
   bottom: 0;
   left: 0;
   transform: translateY(1rem);
+}
+
+.single.singular .entry-title {
+  margin-bottom: 2.2rem;
 }
 
 /* Entry Meta
