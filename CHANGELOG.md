@@ -7,7 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 - Support for MC4WP plugin.
 - White logo for header mobile navigation. 
-- Pagination styles.
+- ~~Pagination styles~~.
+
+## [0.9.9] - 2021-23-05
+### Addded
+- Archive pages title decoration.
+### Fix
+- Single entry title decoration.
 
 ## [0.9.8] - 2021-21-05
 ### Added
