@@ -9,67 +9,66 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - White logo for header mobile navigation. 
 - ~~Pagination styles~~.
 
-## [0.9.9] - 2021-23-05
-### Addded
+#### [0.9.9] - 2021-23-05
+##### Addded
 - Archive pages title decoration.
-### Fix
+##### Fix
 - Single entry title decoration.
 
-## [0.9.8] - 2021-21-05
-### Added
+#### [0.9.8] - 2021-21-05
+##### Added
 - Styles for the Post info.
 - Post info icons.
 - Entry title decoration.
 
-## [0.9.7] - 2021-19-05
-### Change
+#### [0.9.7] - 2021-19-05
+##### Change
 - Pagination Styles according to the design. 
 
 
-## [0.9.6] - 2021-13-05
-### Added
+#### [0.9.6] - 2021-13-05
+##### Added
 - Post meta and post info styles.
 - Fix header search form styles.
-
-### Change
+##### Change
 - Translate the Comment title and comments button text. 
 
-## [0.9.5] - 2021-10-05
-### Added
+#### [0.9.5] - 2021-10-05
+##### Added
 - ACF resources custom block and styles to suppot it.
 - Search form on header.
 - Search icom (button) on header and fixed it.
 
-## [0.9.4] - 2021-10-05
-### Change
+#### [0.9.4] - 2021-10-05
+##### Change
 - Fixed navigation styles
 - Fixed Blog post (from partial) styles. Fluid width.
 - shrinking logo on mobile.
 
-## [0.9.3] - 2021-19-04
-### Added
+#### [0.9.3] - 2021-19-04
+##### Added
 - Support for posts partials, `archive-blog` and `archive-grid`.
 - Better support for transparent header on Home page.
 - Shrinking mobile nav header.
 
-### Change 
+##### Change 
 - Better site logo support for mobile.  
 
-## [0.9.2] - 2021-19-04
-### Added
+#### [0.9.2] - 2021-19-04
+##### Added
 - Home header and transparent navigation styles.
 - Header mobile navigation.
 - Dark overlay behind mobile navigation.
 
-### Change
+##### Change
 - Mobile menu floating from the right. 
 
-## [0.9.1] - 2021-18-04
-### Added
+#### [0.9.1] - 2021-18-04
+##### Added
 - Wotfard italis styles.
 - Typography styles.
 - Display Posts Shortcode plugin partial support (Grid styles for Actividades and Exepriemntos).
 
-## [0.9.0] - 2021-03-04
-### Added
+#### [0.9.0] - 2021-03-04
+##### Added
 - Inicial upload.
