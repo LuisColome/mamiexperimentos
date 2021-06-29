@@ -2,6 +2,120 @@
 
 /* Entry Comments 
 --------------------------------------------- */
+.entry-comments {
+    // Remove list styles
+    ol,
+    ul {
+        list-style: none;
+    }
+
+    .comment {
+
+        article {
+            border: 1px solid $grey_3;
+            border-radius: $border-radius;
+        }
+    }
+
+    .comment-header {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: first baseline;
+        padding: .5rem 1rem;
+        background-color: $grey_3;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .comment-author {
+        width: max-content;
+        font-family: $josefin, $sans-serif;
+        font-size: 1.15rem;
+        line-height: 0;
+        margin: 0.35rem 0.6rem 0 0;
+
+        a {
+            color: $base-color;
+            text-decoration: none;
+            font-weight: 700;
+
+            &:hover,
+            &:focus {
+                color: $primary-color;
+            }
+        }
+    }
+
+    // Add "Staff" word to registered users
+    .staff {
+
+        > article {
+
+            > .comment-header {
+
+                .comment-author {
+
+                    &::after {
+                        content: 'Staff';
+                        font-size: 70%;
+                        padding: 0.3rem 0.6rem 0.05rem 0.6rem;
+                        margin-left: .2rem;
+                        background-color: $primary-color;
+                        color: $white;
+                        border-radius: $border-radius;
+                        position: relative;
+                        top: -.13rem;
+                    }
+                }
+            }
+        }   
+    }
+
+    .comment-meta {
+
+        a {
+            text-decoration: none;
+            color: $base-color;
+            font-size: 80%;
+
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .comment-content {
+        clear: both;
+        padding: .5rem 1rem;
+      
+        ul > li {
+            list-style-type: disc;
+        }
+    }
+
+    .comment-reply {
+        padding: 1rem;
+
+        a {
+            text-decoration: none;
+            padding: .15rem .65rem;
+            border: 1px solid $primary-color;
+            border-radius: $border-radius;
+            font-weight: 400;
+
+            &:hover,
+            &:focus {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
 
 .comment-respond {
     margin-top: $margin_4x;
@@ -21,18 +135,6 @@
   padding-left: 0;
 }
 
-.comment-header {
-  margin-bottom: 30px;
-}
-
-.comment-content {
-  clear: both;
-}
-
-.comment-content ul > li {
-  list-style-type: disc;
-}
-
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
@@ -44,10 +146,6 @@
   margin-right: 12px;
 }
 
-.comment-header p {
-  margin-bottom: 0;
-}
-
 .entry-pings .reply {
   display: none;
 }
@@ -55,4 +153,8 @@
 .comment-form-cookies-consent label {
   display: inline;
   padding-left: 10px;
+}
+
+.comment-edit-link {
+    display: none;
 }

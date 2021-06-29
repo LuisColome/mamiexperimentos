@@ -653,11 +653,22 @@ figure {
 
 /* Blockquote
 --------------------------------------------- */
-blockquote.wp-block-quote {
+.entry-content blockquote.wp-block-quote,
+.entry-content .wp-block-pullquote {
   position: relative;
-  padding: 4% 0 0 4%;
+  padding: 5%;
+  margin: 2.2rem auto;
+  border: 2px solid #eeeeee;
+  border-radius: 10px;
+  text-align: left;
 }
-blockquote.wp-block-quote::before {
+.entry-content blockquote.wp-block-quote blockquote,
+.entry-content .wp-block-pullquote blockquote {
+  padding: 0;
+  margin: 0;
+}
+.entry-content blockquote.wp-block-quote::before,
+.entry-content .wp-block-pullquote::before {
   content: "";
   display: block;
   position: absolute;
@@ -666,24 +677,32 @@ blockquote.wp-block-quote::before {
   width: 100%;
   height: 100%;
   z-index: 1;
-  top: -35px;
-  background: transparent url(../icons/utility/quote.svg) no-repeat top left;
-  background-size: 120px;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateX(-50%) translateY(-20px) rotate(180deg);
+  border: 2px solid #eeeeee;
+  border-radius: 100px;
+  padding: 20px;
+  background: #ffffff url(../icons/utility/quote.svg) no-repeat center center;
+  background-size: 25px;
   text-align: left;
-  opacity: 0.1;
 }
-blockquote.wp-block-quote p {
+.entry-content blockquote.wp-block-quote p,
+.entry-content .wp-block-pullquote p {
   color: #414243;
   font-size: 22px;
   font-style: italic;
   font-weight: 400;
 }
 @media (min-width: 48rem) {
-  blockquote.wp-block-quote p {
+  .entry-content blockquote.wp-block-quote p,
+.entry-content .wp-block-pullquote p {
     font-size: 22px 24px;
   }
 }
-blockquote.wp-block-quote cite {
+.entry-content blockquote.wp-block-quote cite,
+.entry-content .wp-block-pullquote cite {
   color: #414243;
   display: block;
   font-size: 85%;
@@ -692,35 +711,9 @@ blockquote.wp-block-quote cite {
   opacity: 0.5;
   text-transform: uppercase;
 }
-blockquote.wp-block-quote p:last-of-type {
+.entry-content blockquote.wp-block-quote p:last-of-type,
+.entry-content .wp-block-pullquote p:last-of-type {
   margin-bottom: 0;
-}
-
-.wp-block-pullquote {
-  text-align: left;
-  padding: 0;
-  margin: 1.25rem auto;
-}
-.wp-block-pullquote blockquote {
-  margin: 0;
-  padding: 4% 8%;
-  background-color: #f2f3f8;
-  border-left: 3px solid #E97171;
-}
-.wp-block-pullquote blockquote p {
-  color: #414243;
-  font-size: 19px;
-  font-style: italic;
-}
-@media (min-width: 48rem) {
-  .wp-block-pullquote blockquote p {
-    font-size: 20px;
-  }
-}
-@media (min-width: 60rem) {
-  .wp-block-pullquote blockquote p {
-    font-size: 22px;
-  }
 }
 
 /* Separator
@@ -1091,28 +1084,81 @@ img.aligncenter {
  */
 /** Contact Form 7
 ---------------------------------------------------------------------------- */
-.lcm-cf7-form .lcm-cf7-form_columns {
+.wpcf7 .screen-reader-response {
+  display: none;
+}
+
+.failed .wpcf7-response-output, .invalid .wpcf7-response-output, .sent .wpcf7-response-output {
+  display: flex;
+  align-items: center;
+  padding: 1.5em 2em;
+  border-radius: 10px;
+  box-shadow: 0 1.3px 6.5px rgba(0, 0, 0, 0.065), 0 4.5px 21.9px rgba(0, 0, 0, 0.087), 0 20px 98px rgba(0, 0, 0, 0.12);
+  font-size: 1rem;
+}
+.failed .wpcf7-response-output::before, .invalid .wpcf7-response-output::before, .sent .wpcf7-response-output::before {
+  margin-right: 0.5em;
+  font-size: 2em;
+}
+.failed .wpcf7-response-output, .invalid .wpcf7-response-output {
+  color: crimson;
+}
+.failed .wpcf7-response-output:before, .invalid .wpcf7-response-output:before {
+  content: "⚠";
+}
+.sent .wpcf7-response-output {
+  color: green;
+}
+.sent .wpcf7-response-output::before {
+  content: "✓";
+}
+
+.lcm-cf7-form .lcm-cf7-form__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
   margin-bottom: 1.25rem;
 }
-@media (min-width: 48rem) {
-  .lcm-cf7-form .lcm-cf7-form_columns {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.25rem;
-  }
+.lcm-cf7-form label {
+  font-size: 15px;
+}
+.lcm-cf7-form label span.required {
+  color: crimson;
+  font-weight: 400;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea {
+  margin: 0.2em 0;
+  background-color: #fafafa;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input:focus,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea:focus {
+  border-color: #E97171;
+  outline: none;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap input.wpcf7-not-valid,
+.lcm-cf7-form label .wpcf7-form-control-wrap textarea.wpcf7-not-valid {
+  border: 1px solid crimson;
+}
+.lcm-cf7-form label .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+  font-size: 90%;
+  color: crimson;
 }
 .lcm-cf7-form .lcm-cf7-form__input input {
   margin: 1.25rem 0;
-  padding: 14px 36px;
+  padding: 12px 36px;
   width: auto;
   min-width: 230px;
   border: none;
   color: #ffffff;
   background-color: #E97171;
+  border-radius: 10px;
 }
 .lcm-cf7-form .lcm-cf7-form__input input:hover {
   background-color: #e24545;
+}
+.lcm-cf7-form input {
+  border-radius: 10px;
 }
 
 /* Genesis Blocks
@@ -2465,6 +2511,82 @@ textarea:focus:-ms-input-placeholder {
 
 /* Entry Comments 
 --------------------------------------------- */
+.entry-comments ol,
+.entry-comments ul {
+  list-style: none;
+}
+.entry-comments .comment article {
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+}
+.entry-comments .comment-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: first baseline;
+  padding: 0.5rem 1rem;
+  background-color: #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.entry-comments .comment-header p {
+  margin-bottom: 0;
+}
+.entry-comments .comment-author {
+  width: max-content;
+  font-family: "Josefin Sans", "Wotfard", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 1.15rem;
+  line-height: 0;
+  margin: 0.35rem 0.6rem 0 0;
+}
+.entry-comments .comment-author a {
+  color: #414243;
+  text-decoration: none;
+  font-weight: 700;
+}
+.entry-comments .comment-author a:hover, .entry-comments .comment-author a:focus {
+  color: #E97171;
+}
+.entry-comments .staff > article > .comment-header .comment-author::after {
+  content: "Staff";
+  font-size: 70%;
+  padding: 0.3rem 0.6rem 0.05rem 0.6rem;
+  margin-left: 0.2rem;
+  background-color: #E97171;
+  color: #ffffff;
+  border-radius: 10px;
+  position: relative;
+  top: -0.13rem;
+}
+.entry-comments .comment-meta a {
+  text-decoration: none;
+  color: #414243;
+  font-size: 80%;
+}
+.entry-comments .comment-meta a:hover, .entry-comments .comment-meta a:focus {
+  text-decoration: underline;
+}
+.entry-comments .comment-content {
+  clear: both;
+  padding: 0.5rem 1rem;
+}
+.entry-comments .comment-content ul > li {
+  list-style-type: disc;
+}
+.entry-comments .comment-reply {
+  padding: 1rem;
+}
+.entry-comments .comment-reply a {
+  text-decoration: none;
+  padding: 0.15rem 0.65rem;
+  border: 1px solid #E97171;
+  border-radius: 10px;
+  font-weight: 400;
+}
+.entry-comments .comment-reply a:hover, .entry-comments .comment-reply a:focus {
+  background-color: #E97171;
+  color: #ffffff;
+}
+
 .comment-respond {
   margin-top: 4.4rem;
 }
@@ -2483,18 +2605,6 @@ textarea:focus:-ms-input-placeholder {
   padding-left: 0;
 }
 
-.comment-header {
-  margin-bottom: 30px;
-}
-
-.comment-content {
-  clear: both;
-}
-
-.comment-content ul > li {
-  list-style-type: disc;
-}
-
 .comment-respond input[type=email],
 .comment-respond input[type=text],
 .comment-respond input[type=url] {
@@ -2506,10 +2616,6 @@ textarea:focus:-ms-input-placeholder {
   margin-right: 12px;
 }
 
-.comment-header p {
-  margin-bottom: 0;
-}
-
 .entry-pings .reply {
   display: none;
 }
@@ -2517,6 +2623,10 @@ textarea:focus:-ms-input-placeholder {
 .comment-form-cookies-consent label {
   display: inline;
   padding-left: 10px;
+}
+
+.comment-edit-link {
+  display: none;
 }
 
 /**
