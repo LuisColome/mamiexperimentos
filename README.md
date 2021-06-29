@@ -1,6 +1,6 @@
 # MamiExperimentos Genesis Child Theme
 
-[![MamiExperimentos Genesis Child Theme v0.9.9 badge][changelog-badge]][changelog] [![Version v0.9.9 Badge][version-badge]][changelog] [![Last Commit Badge][last-commit-badge]][commits]
+[![MamiExperimentos Genesis Child Theme v0.9.9.2 badge][changelog-badge]][changelog] [![Version v0.9.9.2 Badge][version-badge]][changelog] [![Last Commit Badge][last-commit-badge]][commits]
 
 ![MamiExperimentos Logo](images/logo.png)
 
@@ -37,6 +37,6 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 
 [changelog]: ./CHANGELOG.md
 [commits]: https://github.com/LuisColome/mamiexperimentos/commits/develop
-[changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v0.9.9-orange
-[version-badge]: https://img.shields.io/badge/version-v0.9.9-blue
+[changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v0.9.9.2-orange
+[version-badge]: https://img.shields.io/badge/version-v0.9.9.2-blue
 [last-commit-badge]: https://img.shields.io/github/last-commit/LuisColome/mamiexperimentos/develop?color=green
