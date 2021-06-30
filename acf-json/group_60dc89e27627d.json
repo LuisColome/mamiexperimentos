@@ -1,0 +1,62 @@
+{
+    "key": "group_60dc89e27627d",
+    "title": "Adsense for MamiExperimentos",
+    "fields": [
+        {
+            "key": "field_60dc8a7948ba4",
+            "label": "Adsense in archive pages",
+            "name": "mmx_adsense_archive",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_60dca09b21454",
+            "label": "Adsense end of content",
+            "name": "mmx_adsense_end_content",
+            "type": "textarea",
+            "instructions": "Adsense visible at the end of the  content. Right before pagination or comments on single posts.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625072006
+}
