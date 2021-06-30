@@ -1,0 +1,14 @@
+/**
+ * Brand Color
+ * 
+ * Use: brand-color( 'blue', 'darken' );
+ * The color has to be declare in the variable $brandcolors in base.scss
+ *
+ */
+.archive .anuncio {
+  grid-column: 1/-1;
+}
+.anuncio__wrap {
+  max-width: 48rem;
+  margin: 1.25rem auto;
+}

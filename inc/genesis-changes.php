@@ -200,3 +200,14 @@ function genesis_sample_blocks_body_classes( $classes ) {
 
 }
 add_filter( 'body_class', 'genesis_sample_blocks_body_classes' );
+
+/**
+ * Remove post info from experimentos y actividades categories.
+ * 
+ */
+function mmx_remove_post_info(){
+	if( is_single() && in_category( array(2,5,28,29,30,31) ) ) {
+        remove_action( 'genesis_entry_header', 'genesis_post_info', 12 );
+    }
+}
+add_action( 'genesis_before_entry', 'mmx_remove_post_info' );

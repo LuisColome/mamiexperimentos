@@ -1,0 +1,17 @@
+// AdSense
+ 
+@import "base";
+@import "../vendor/include-media.scss";
+
+.anuncio {
+    display: block;
+
+    .archive & {
+        grid-column: 1 / -1;
+    }
+
+    &__wrap {
+        max-width: $content-width;
+        margin: $block-margin auto;
+    }
+}
