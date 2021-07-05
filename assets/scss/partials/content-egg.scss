@@ -1,0 +1,100 @@
+/**
+* # Content Egg 3 column grid with Flexbox.
+* ---------------------------------------------------------------------------------------------------- */
+
+.cegg__grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(318px, 1fr) );
+    gap: $grid-gap;
+}
+
+.cegg__item {
+    position: relative;
+    border: 1px solid #dedede;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 4px;
+
+    .cegg__promotion {
+        position: absolute;
+        top: 35px;
+        left: -1px;
+        background: none repeat scroll 0 0 #eb5e58;
+        border-radius: 0 4px 4px 0;
+        color: #fff;
+    }
+
+    .cegg__discount {
+        padding: 0 8px 0 10px;
+        font-weight: normal;
+    }
+
+    .cegg__thumb {
+        display: block;
+        padding: 6%;
+
+        img {
+            width: auto;
+            max-height: 320px;
+        }
+    }
+
+    .cegg__mb10 {
+        display: none;
+    }
+      
+    .cegg__info {
+        padding: 1rem 6% 1.7rem;
+    
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .cegg__product-title {
+        color: $base-color;
+    }
+      
+    .cegg__product-price {
+        min-height: 43px;
+        color: #999;
+        font-size: 1.05rem;
+        line-height: 1.2;
+        margin-bottom: 0.3em;
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        align-items: baseline;
+    
+        strike {
+            color: $grey_6;
+            font-weight: normal;
+            order: 1;
+        }
+    
+        .cegg__price {
+            margin-bottom: 0.4em;
+            font-size: 112%;
+            color: $base-color;
+            order: 0;
+        }
+    }
+      
+    .cegg__btn {
+        padding: 0.15em 0.7em;
+        border: 1px solid transparent;
+        border-color: #9c7e31 #90742d #786025;
+        border-radius: 3px;
+        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset;
+        background: #f0c14b;
+        background: linear-gradient(to bottom, #f7dfa5, #f0c14b) repeat scroll 0 0
+          rgba(0, 0, 0, 0);
+        font-family: $sans-serif;
+        font-size: 1rem;
+        color: #444;
+        display: block;
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: -0.8px;
+    }
+}
