@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - White logo for header mobile navigation. 
 - ~~Pagination styles~~.
 
+#### [Version 1.0.1](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1) - 2021-05-07
+#### Addded
+- Suport for the Content Egg plugin
+
 #### [Version 1.0.0](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.0) - 2021-30-06
 #### Addded
 - Custom fields for Google AdSense
