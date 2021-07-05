@@ -3,6 +3,8 @@
 /* Forms
 --------------------------------------------- */
 
+$default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors array
+
 input, select, textarea {
 	background: $white;
 	border: 1px solid $border-color;
@@ -12,6 +14,26 @@ input, select, textarea {
 	line-height: 24px;
 	padding: 14px 16px;
 	width: 100%;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    background: brand-color( $default );
+	border: 2px solid brand-color( $default );
+	border-radius: $border-radius;
+	font-size: 1.15rem;
+	font-weight: 500;
+	line-height: 1.2;
+	padding: .56em 1.95em;
+	text-decoration: none;
+    color: $white;
+
+    &:hover,
+    &:focus {
+        border: 2px solid brand-color( $default, 'darken' );
+        background-color: brand-color( $default, 'darken' );
+    }
 }
 
 select {
@@ -24,3 +46,27 @@ textarea {
 }
 
 @include placeholder-color( $grey_5 );
+
+/* MC4WP Form support
+--------------------------------------------- */
+
+.mc4wp-form {
+
+    .mmexmcform-email {
+
+        input {
+            margin-bottom: .8rem;
+        }
+    }
+    
+    .mmexmcform-agree { 
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+
+        input {
+            width: 16px;
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1547,6 +1547,28 @@ input, select, textarea {
   width: 100%;
 }
 
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background: #E97171;
+  border: 2px solid #E97171;
+  border-radius: 10px;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 0.56em 1.95em;
+  text-decoration: none;
+  color: #ffffff;
+}
+input[type=button]:hover, input[type=button]:focus,
+input[type=reset]:hover,
+input[type=reset]:focus,
+input[type=submit]:hover,
+input[type=submit]:focus {
+  border: 2px solid #e24545;
+  background-color: #e24545;
+}
+
 select {
   line-height: 54px;
   height: 54px;
@@ -1576,6 +1598,21 @@ textarea:focus::-webkit-input-placeholder,
 textarea:focus::-moz-placeholder,
 textarea:focus:-ms-input-placeholder {
   color: transparent;
+}
+
+/* MC4WP Form support
+--------------------------------------------- */
+.mc4wp-form .mmexmcform-email input {
+  margin-bottom: 0.8rem;
+}
+.mc4wp-form .mmexmcform-agree {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.mc4wp-form .mmexmcform-agree input {
+  width: 16px;
+  margin-right: 1rem;
 }
 
 /* Sidebar

@@ -95,7 +95,7 @@ function ea_child_theme_setup() {
 	remove_image_size( '2048x2048' );
 
 	// Adds image sizes.
-	add_image_size( 'lcm-featured-image', 768, 492, true ); // 16:9
+	add_image_size( 'lcm-featured-image', 768, 492, true ); 
 
 	/**
 	 * Register custom images sizes to use in Gutenberg
