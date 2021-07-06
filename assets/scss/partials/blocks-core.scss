@@ -201,6 +201,8 @@ hr {
 /* Image and Gallery
 --------------------------------------------- */
 
+
+.wp-block-image:not(.is-style-rounded) img,
 img {
 	display: block;
 	max-width: 100%;
