@@ -63,10 +63,15 @@ textarea {
         display: flex;
         flex-flow: row nowrap;
         justify-content: flex-start;
+        color: $white;
 
         input {
             width: 16px;
             margin-right: 1rem;
+        }
+
+        a{
+            margin-left: 6px;
         }
     }
 }

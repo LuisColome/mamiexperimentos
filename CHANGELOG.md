@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
 
+#### [Version 1.0.1.4](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.3) - 2021-05-07
+#### Fixed
+- White logo on Home page
+- Kadence fullwidth padding
+- Enable custom colors on Guetenberg
+
 #### [Version 1.0.1.3](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.3) - 2021-05-07
 #### Fixed
 - Border radius on entry content images

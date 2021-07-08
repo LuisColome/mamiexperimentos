@@ -1613,10 +1613,14 @@ textarea:focus:-ms-input-placeholder {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  color: #ffffff;
 }
 .mc4wp-form .mmexmcform-agree input {
   width: 16px;
   margin-right: 1rem;
+}
+.mc4wp-form .mmexmcform-agree a {
+  margin-left: 6px;
 }
 
 /* Sidebar
@@ -2070,7 +2074,7 @@ textarea:focus:-ms-input-placeholder {
   background-color: #ffffff;
 }
 .home .site-header:not(.shrink) .site-title a {
-  background-image: url(wp-content/themes/mamiexperimentos/assets/images/logo-white.png) !important;
+  background-image: url(/wp-content/themes/mamiexperimentos/assets/images/logo-white.png) !important;
   background-size: cover;
 }
 
@@ -2791,6 +2795,11 @@ textarea:focus:-ms-input-placeholder {
   max-width: 100vw;
   width: 100vw;
   padding: 0 1.375rem;
+}
+.full-width-content .entry-content > *.alignfull.wp-block-kadence-rowlayout, .content-width .entry-content > *.alignfull.wp-block-kadence-rowlayout,
+.full-width-content .editor-styles-wrapper > *.alignfull.wp-block-kadence-rowlayout,
+.content-width .editor-styles-wrapper > *.alignfull.wp-block-kadence-rowlayout {
+  padding: 0;
 }
 .full-width-content .entry-content > *.aligncontent, .content-width .entry-content > *.aligncontent,
 .full-width-content .editor-styles-wrapper > *.aligncontent,
