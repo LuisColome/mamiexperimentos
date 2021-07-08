@@ -27,3 +27,14 @@
   .gs-faq__question.gs-faq--expanded::after {
     content: "\f460";
   }
+
+
+.wp-block-kadence-infobox{
+
+    a{
+
+        .kt-infobox-textcontent{
+            font-weight: 400;
+        }
+    }
+}
