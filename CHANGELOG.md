@@ -5,9 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html) (or at least I'll try to).
 
 ### [Unreleased]
-- ~~Support for MC4WP plugin~~.
-- White logo for header mobile navigation. 
+- ~~Support for MC4WP plugin~~
+- ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
+
+#### [Version 1.0.1.3](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.3) - 2021-05-07
+#### Fixed
+- Border radius on entry content images
+- Body text size (bigger).
 
 #### [Version 1.0.1.2](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.2) - 2021-05-07
 #### Added
