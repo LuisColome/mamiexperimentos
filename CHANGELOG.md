@@ -9,7 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
 
-#### [Version 1.0.1.4](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.3) - 2021-05-07
+#### [Version 1.0.1.5](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.5) - 2021-13-07
+#### Added
+- Sedondary menu on Footer
+#### Fixed
+- Fixed footer padding on small devices.
+- Fixed border radius on text area form elements.
+- Fixed MC4WP plugin support
+#### Remoced
+- Remove links from Footer creds (now we have secondary menu)
+
+#### [Version 1.0.1.4](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.4) - 2021-05-07
 #### Fixed
 - White logo on Home page
 - Kadence fullwidth padding
