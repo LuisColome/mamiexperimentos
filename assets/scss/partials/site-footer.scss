@@ -10,13 +10,13 @@
 	position: relative;
 	color: $white;
 
-  .wrap {
+    .wrap {
 
-    &::before,
-    &::after {
-      content: none;
+        &::before,
+        &::after {
+            content: none;
+        }
     }
-  }
 
 	ul {
 		margin-bottom: 30px;
@@ -52,8 +52,8 @@
 	@include media("<tablet") {
 
 		.social-links li {
-				display: inline-block;
-				margin: 0;
+            display: inline-block;
+            margin: 0;
 		}
 
 		.social-links .label {
@@ -78,8 +78,8 @@
 
 	@include media(">=tablet") {
 		.wrap {
-      max-width: $grid-width;
-      margin: 0 auto;
+            max-width: $grid-width;
+            margin: 0 auto;
 			@include columns( 3, 'div' );
 		}
 	}
@@ -95,14 +95,44 @@
 	padding: 32px 0;
 	text-align: center;
 
+    @include media("<=large") {
+        padding: 32px $wrap_edge;
+    }
+
 	.wrap {
-    max-width: $grid-width;
-    margin: 0 auto;
+        max-width: $grid-width;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
     
-    & > *:last-child {
-		  margin-bottom: 0;
-	  }
-}
+        & > *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .nav-secondary {
+        
+        .menu {
+            margin-bottom: $block-margin;
+            
+            a {
+                color: $white;
+                font-size: 14px;
+                font-weight: 500;
+                text-decoration: underline;
+
+                &:hover,
+                &:focus {
+                    color: $primary-color;
+                }
+            }
+
+            .current-menu-item a {
+                color:  $primary-color;
+            }
+        }
+    }
 
 	a {
 		color: rgba( $white, .75 );

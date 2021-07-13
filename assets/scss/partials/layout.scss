@@ -42,10 +42,10 @@ input[type="search"] {
   clear: both;
   max-width: $grid-width;
   margin: 0 auto;
-  padding: 60px 0 30px;
+  padding: 60px 0 130px;
 
   @include media("<=large") {
-    padding: 60px $wrap_edge 30px;
+    padding: 60px $wrap_edge 130px;
   }
 
   // Remove the top padding if the first block is alignfull.

@@ -8,7 +8,7 @@ $default: nth( nth( $brand_colors, 1 ), 1 ); // first color in $brand_colors arr
 input, select, textarea {
 	background: $white;
 	border: 1px solid $border-color;
-	border-radius: 4px;
+	border-radius: $border-radius;
 	color: $base-color;
 	font-size: 18px;
 	line-height: 24px;
@@ -51,6 +51,10 @@ textarea {
 --------------------------------------------- */
 
 .mc4wp-form {
+
+    input {
+        border-radius: $border-radius;
+    }
 
     .mmexmcform-email {
 

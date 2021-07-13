@@ -77,7 +77,6 @@
     .current-menu-item > a,
     .sub-menu .current-menu-item > a:focus,
     .sub-menu .current-menu-item > a:hover {
-        // color: brand-color( 'dark-green' );
         text-decoration: none;
 
         span::after {
@@ -100,39 +99,19 @@
 	}
 
 	.nav-secondary {
-		.menu-item.search {
-			@include media("<=mobile_menu") {
-				padding: 4px 16px 16px;
-			}
-			@include media(">mobile_menu") {
-				margin: 5px 0 0 8px;
+        margin: 0 -18px; //Fix the general margin beacuse of the padding menu links. 
 
-				.search-field {
-					padding-top: 8px;
-					padding-bottom: 8px;
-					width: 268px;
-				}
-			}
+        .menu {
+			display: inline-block;
+			width: auto;
+
+            .menu-item{
+                float: left;
+            }
 		}
 	}
 
-	// .nav-primary {
-
-	// 	.menu-item.search {
-	// 		line-height: 0;
-
-	// 		button {
-	// 			padding: 12px;
-	// 		}
-
-	// 		// @include media("<=mobile_menu") {
-	// 		// 	display: none;
-	// 		// }
-	// 	}
-	// }
-
 	@include media(">mobile_menu") {
-		// width: calc( 100% - #{$menu_width} );
         width: auto;
 		display: flex;
 		flex-flow: column-reverse nowrap;
@@ -159,7 +138,6 @@
 			&:hover {
 
 				& > .sub-menu {
-					// left: auto;
                     visibility: visible;
 					opacity: 1;
                     transform: translateY(0px);
@@ -170,7 +148,6 @@
 
 		.sub-menu {
 			background: $white;
-			// left: -9999px;
             visibility: hidden;
 			opacity: 0;
 			position: absolute;
@@ -201,62 +178,60 @@
 		}
 	}
 
-	@include media("<=mobile_menu") {
-        position: fixed;
-        width: 100%;
-        max-width: 340px;
-        height: 100%;
-        top: 0;
-        right: -100%;
-        background: $white;
-        transition: all .3s ease-in-out;
-        padding: 105px $grid-gap 0;
-        overflow: auto;
-        z-index: 997;
-
-		&.active {
-            right: 0;
+    &:not(.footer) {
+        @include media("<=mobile_menu") {
+            position: fixed;
+            width: 100%;
+            max-width: 340px;
+            height: 100%;
+            top: 0;
+            right: -100%;
+            background: $white;
+            transition: all .3s ease-in-out;
+            padding: 105px $grid-gap 0;
             overflow: auto;
-		}
+            z-index: 997;
 
-		.menu > .menu-item > a {
-			padding: 11px 18px;
-            font-size: 18px;
-		}
-
-		.submenu-expand {
-			top: 0;
-			right: 0;
-			transform: none;
-			@include icon-position( 44px );
-
-			svg {
-				@include icon-position( 14px );
-			}
-
-			// &:not(.expanded) {
-			// 	transform: rotate(180deg);
-			// }
-
-			&.expanded {
-				transform: rotate(180deg);
-
-				& + .sub-menu {
-					display: block;
-				}
-			}
-		}
-
-		.sub-menu {
-			display: none;
-			padding-left: 12px;
-
-            & > .menu-item > a {
-                font-size: 15px;
-                line-height: 1.4;
+            &.active {
+                right: 0;
+                overflow: auto;
             }
-		}
-	}
+
+            .menu > .menu-item > a {
+                padding: 11px 18px;
+                font-size: 18px;
+            }
+
+            .submenu-expand {
+                top: 0;
+                right: 0;
+                transform: none;
+                @include icon-position( 44px );
+
+                svg {
+                    @include icon-position( 14px );
+                }
+
+                &.expanded {
+                    transform: rotate(180deg);
+
+                    & + .sub-menu {
+                        display: block;
+                    }
+                }
+            }
+
+            .sub-menu {
+                display: none;
+                padding-left: 12px;
+
+                & > .menu-item > a {
+                    font-size: 15px;
+                    line-height: 1.4;
+                }
+            }
+        }
+    }
 }
 
 /* Home transpatent navigation styles within transpatent header
@@ -322,8 +297,6 @@
 
     a {
         display: block;
-        // background: url(http://localhost/cfhh/wp-content/themes/box-theme/assets/images/logo-white.png);
-        // background-size: cover;
         text-indent: -9999px;
         width: 177px;
         height: 50px;
@@ -412,7 +385,6 @@
 /* Menu Toggle
 --------------------------------------------- */
 
-// .search-toggle,  // no search box for WhiteRiverManor
 .menu-toggle {
 
 	@include button-reset;
@@ -428,10 +400,6 @@
     @include media(">mobile_menu") {
         display: none; // Only display the toggle menu on mobile.
     }
-
-	// .close {
-	// 	display: none;
-	// }
 	
 	.toggl__bar {
 		display: block;
@@ -488,15 +456,4 @@
 			}
 		}
 	}
-
-	// &.active {
-
-	// 	.close {
-	// 		display: inline;
-	// 	}
-
-	// 	.open {
-	// 		display: none;
-	// 	}
-	// }
 }

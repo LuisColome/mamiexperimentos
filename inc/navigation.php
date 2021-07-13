@@ -39,18 +39,19 @@ add_action( 'genesis_header', 'ea_site_header', 11 );
 
 /**
  * Footer Menu
+ * Place the secondary menu above the footer creds.
  *
  */
 function lcm_footer_menu() {
 
-	echo '<nav class="nav-menu" role="navigation">';
+	echo '<nav class="nav-menu footer" role="navigation">';
 	if( has_nav_menu( 'secondary' ) ) {
 		wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'secondary-menu', 'container_class' => 'nav-secondary' ) );
 	}
 	echo '</nav>';
 
 }
-// add_action( 'genesis_footer', 'lcm_footer_menu', 12 );
+add_action( 'genesis_footer', 'lcm_footer_menu', 8 );
 
 
 
@@ -60,13 +61,14 @@ function lcm_footer_menu() {
  */
 function ea_nav_extras( $menu, $args ) {
 
+    // We add the search form to the primary nav
 	if( 'primary' === $args->theme_location ) {
 		$menu .= '<li class="menu-item search">' . ea_search_toggle() . '</li>';
 	}
 
-	if( 'secondary' === $args->theme_location ) {
-		$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
-	}
+	// if( 'secondary' === $args->theme_location ) {
+	// 	$menu .= '<li class="menu-item search">' . get_search_form( false ) . '</li>';
+	// }
 
 	return $menu;
 }
