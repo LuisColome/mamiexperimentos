@@ -39,4 +39,4 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 [commits]: https://github.com/LuisColome/mamiexperimentos/commits/develop
 [changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v1.0.1.6-orange
 [version-badge]: https://img.shields.io/badge/version-v1.0.1.6-blue
-[last-commit-badge]: https://img.shields.io/github/last-commit/LuisColome/mamiexperimentos/develop?color=green
+[last-commit-badge]: https://img.shields.io/github/last-commit/LuisColome/mamiexperimentos/main?color=green
