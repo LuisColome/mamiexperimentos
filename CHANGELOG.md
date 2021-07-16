@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
 
+#### [Version 1.0.1.7](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.7) - 2021-16-07
+#### Remoded
+- Flexslider support.
+
 #### [Version 1.0.1.6](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.6) - 2021-16-07
 #### Fixed
 - Margin bottom on Media and Text Block on small screens
