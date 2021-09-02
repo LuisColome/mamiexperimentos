@@ -61,6 +61,17 @@ class BE_ACF_Customizations {
             'category'          => 'media',
         ));
 
+         // Register a resources block.
+         acf_register_block_type(array(
+            'name'              => 'adsense-custom-block',
+            'title'             => __('AdSense Custom Block'),
+            'description'       => __('A custom block to insert AdSense ads.'),
+            'icon' 				=> 'screenoptions',
+            'keywords' 			=> array('ads', 'adsense', 'AdSense', 'publi'),
+            'render_template'   => 'partials/blocks/ads/ads.php',
+            'category'          => 'media',
+        ));
+
 	}
 }
 new BE_ACF_Customizations();
