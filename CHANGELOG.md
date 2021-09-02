@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
 
+#### [Version 1.2](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.2) - 2021-02-09
+#### Added
+- Ads on Archive pages
+- Ads on posts after third paragraph and twelfth paragraph (this one is unsed for now)
+- Custom Adsense Block to use on Gutenberg (ACF).
+#### Fixed
+- Pagination margin on smaller screens.
+
 #### [Version 1.0.1.7](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.0.1.7) - 2021-16-07
 #### Remoded
 - Flexslider support.

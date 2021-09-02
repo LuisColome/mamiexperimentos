@@ -1,6 +1,6 @@
 # MamiExperimentos Genesis Child Theme
 
-[![MamiExperimentos Genesis Child Theme v1.0.1.7 badge][changelog-badge]][changelog] [![Version v1.0.1.7 Badge][version-badge]][changelog] [![Last Commit Badge][last-commit-badge]][commits]
+[![MamiExperimentos Genesis Child Theme v1.2 badge][changelog-badge]][changelog] [![Version v1.2 Badge][version-badge]][changelog] [![Last Commit Badge][last-commit-badge]][commits]
 
 ![MamiExperimentos Logo](images/logo.png)
 
@@ -10,7 +10,7 @@ Luis Colomé ( [@luiscolome](https://twitter.com/luiscolome) / [luiscolome.com](
 
 ## Summary
 
-Genesis Child theme for [MamiExperimentos.com](https://mamiexperimentos.com/) site. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.7.2 and Genesis 3.3.3.
+Genesis Child theme for [MamiExperimentos.com](https://mamiexperimentos.com/) site. Uses SCSS and PrePros to compile it. Tested up to WordPress 5.8 and Genesis 3.3.5.
 
 ## Usage
 
@@ -37,6 +37,6 @@ Without these projects, this WordPress Genesis Child Theme wouldn't be here.
 
 [changelog]: ./CHANGELOG.md
 [commits]: https://github.com/LuisColome/mamiexperimentos/commits/develop
-[changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v1.0.1.7-orange
-[version-badge]: https://img.shields.io/badge/version-v1.0.1.7-blue
+[changelog-badge]: https://img.shields.io/badge/changelog-MamiExperimentos%20Genesis%20Child%20Theme%20v1.2-orange
+[version-badge]: https://img.shields.io/badge/version-v1.2-blue
 [last-commit-badge]: https://img.shields.io/github/last-commit/LuisColome/mamiexperimentos/main?color=green
