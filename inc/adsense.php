@@ -117,7 +117,7 @@ function mmx_adsense_in_content( $content ) {
         }
         return $new_content;
 }
-add_filter( 'the_content', 'mmx_adsense_in_content' );
+//add_filter( 'the_content', 'mmx_adsense_in_content' );
 
 
 /**
