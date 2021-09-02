@@ -72,7 +72,7 @@ add_action( 'genesis_after_endwhile', 'mmx_adsense_after_content_archive', 8 );
  * Publicidad tras el tercer párrafo en los posts.
  * 
  */
-function mmx_adsense_in_content( $content ) {
+function mmx_adsense_in_content_third_paragraph( $content ) {
     if( !is_single() )
         return $content;
 
@@ -91,14 +91,14 @@ function mmx_adsense_in_content( $content ) {
         }
         return $new_content;
 }
-add_filter( 'the_content', 'mmx_adsense_in_content' );
+add_filter( 'the_content', 'mmx_adsense_in_content_third_paragraph' );
 
 
 /** 
  * Publicidad tras el duodécimo párrafo en los posts.
  * 
  */
-function mmx_adsense_in_content( $content ) {
+function mmx_adsense_in_content_twelfth_paragraph( $content ) {
     if( !is_single() )
         return $content;
 
@@ -117,7 +117,7 @@ function mmx_adsense_in_content( $content ) {
         }
         return $new_content;
 }
-//add_filter( 'the_content', 'mmx_adsense_in_content' );
+//add_filter( 'the_content', 'mmx_adsense_in_content_twelfth_paragraph' );
 
 
 /**
