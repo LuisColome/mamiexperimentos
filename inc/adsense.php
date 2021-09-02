@@ -35,7 +35,7 @@ add_action( 'genesis_after_entry', 'lcm_adsense_on_cat_search_tag', 10 );
  * Publicidad justo antes de la paginacion en páginas de archivo.
  *
  */
-function lcm_adsense_on_cat_search_tag() {
+function lcm_adsense_before_pagination() {
   
     $banner_archive = get_field( 'mmx_adsense_archive', 'option' );
     
@@ -45,7 +45,7 @@ function lcm_adsense_on_cat_search_tag() {
         echo'</div></div>';
     }
   }
-  add_action( 'genesis_after_entry', 'lcm_adsense_on_cat_search_tag', 10 );
+  add_action( 'genesis_after_entry', 'lcm_adsense_before_pagination', 10 );
 
 
 
