@@ -3126,6 +3126,10 @@ textarea:focus:-ms-input-placeholder {
 }
 .site-footer .nav-secondary .menu {
   margin-bottom: 1.25rem;
+  display: flex;
+  width: auto;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 .site-footer .nav-secondary .menu a {
   color: #ffffff;
@@ -3147,22 +3151,6 @@ textarea:focus:-ms-input-placeholder {
 }
 .site-footer .footer-links a + a {
   margin-left: 12px;
-}
-@media (min-width: 48rem) {
-  .site-footer {
-    text-align: left;
-  }
-  .site-footer .footer-left {
-    float: left;
-  }
-  .site-footer .footer-left > *:last-child {
-    margin-bottom: 0;
-  }
-  .site-footer .copyright,
-.site-footer .footer-links {
-    display: inline-block;
-    margin-right: 20px;
-  }
 }
 
 .backtotop {

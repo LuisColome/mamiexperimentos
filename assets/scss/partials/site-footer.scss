@@ -115,6 +115,10 @@
         
         .menu {
             margin-bottom: $block-margin;
+            display: flex;
+            width: auto;
+            flex-flow: row wrap;
+            justify-content: center;
             
             a {
                 color: $white;
@@ -147,23 +151,23 @@
 	}
 
 	
-	@include media(">=tablet") {
-		text-align: left;
+	// @include media(">=tablet") {
+	// 	text-align: left;
 
-		.footer-left {
-			float: left;
+	// 	.footer-left {
+	// 		float: left;
 
-			& > *:last-child {
-				margin-bottom: 0;
-			}
-		}
+	// 		& > *:last-child {
+	// 			margin-bottom: 0;
+	// 		}
+	// 	}
 
-		.copyright,
-		.footer-links {
-			display: inline-block;
-			margin-right: 20px;
-		}
-	}
+	// 	.copyright,
+	// 	.footer-links {
+	// 		display: inline-block;
+	// 		margin-right: 20px;
+	// 	}
+	// }
 
 }
 
