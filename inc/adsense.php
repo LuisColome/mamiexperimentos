@@ -32,24 +32,6 @@ add_action( 'genesis_after_entry', 'lcm_adsense_on_cat_search_tag', 10 );
 
 
 /**
- * Publicidad justo antes de la paginacion en páginas de archivo.
- *
- */
-function lcm_adsense_before_pagination() {
-  
-    $banner_archive = get_field( 'mmx_adsense_archive', 'option' );
-    
-    if( !is_singular() ) {
-        echo '<div class="anuncio anuncio__archive"><div class="anuncio__wrap">';
-        echo $banner_archive;
-        echo'</div></div>';
-    }
-  }
-  add_action( 'genesis_after_entry', 'lcm_adsense_before_pagination', 10 );
-
-
-
-/**
  * Puclividad al final de las paginas de blog, archivo y resultados de búsqueda.
  * 
  */
