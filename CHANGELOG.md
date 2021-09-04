@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - ~~White logo for header mobile navigation~~ 
 - ~~Pagination styles~~.
 
+#### [Version 1.2.3](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.2.3) - 2021-04-09
+#### Added
+- New AdSense after nineth paragraph.
+
 #### [Version 1.2.2](https://github.com/LuisColome/mamiexperimentos/releases/tag/v1.2.2) - 2021-03-09
 #### Fixed
 - Double AdSense block on archive pages.
