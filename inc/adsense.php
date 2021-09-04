@@ -11,9 +11,9 @@
 
 /**
  * Publicidad tras el sexto artículo en blog, página de categoría y resutados de busqueda.
- *
+ * Adsense in archive pages.
+ * 
  * @see  https://crunchify.com/how-to-insert-ads-on-home-page-after-2nd-and-5th-post-in-genesis-framework/
- *
  */
 function lcm_adsense_on_cat_search_tag() {
   
@@ -33,6 +33,7 @@ add_action( 'genesis_after_entry', 'lcm_adsense_on_cat_search_tag', 10 );
 
 /**
  * Puclividad al final de las paginas de blog, archivo y resultados de búsqueda.
+ * Adsense end of content.
  * 
  */
 function mmx_adsense_after_content_archive(){
@@ -52,13 +53,14 @@ add_action( 'genesis_after_endwhile', 'mmx_adsense_after_content_archive', 8 );
 
 /** 
  * Publicidad tras el tercer párrafo en los posts.
+ * Adsense in posts body (after third paragraph).
  * 
  */
 function mmx_adsense_in_content_third_paragraph( $content ) {
     if( !is_single() )
         return $content;
 
-        $banner_single = get_field( 'mmx_adsense_post_body', 'option' );
+        $banner_single = get_field( 'mmx_adsense_post_body_third', 'option' );
 
         $paragraphAfter = 3; //Este es el número del párrafo tras el que irá la publicidad
         $content = explode ( "</p>", $content );
@@ -78,15 +80,16 @@ add_filter( 'the_content', 'mmx_adsense_in_content_third_paragraph' );
 
 /** 
  * Publicidad tras el duodécimo párrafo en los posts.
+ * Adsense in posts body after tenth paragraph). 
  * 
  */
 function mmx_adsense_in_content_twelfth_paragraph( $content ) {
     if( !is_single() )
         return $content;
 
-        $banner_single = get_field( 'mmx_adsense_post_body', 'option' );
+        $banner_single = get_field( 'mmx_adsense_post_body_tenth', 'option' );
 
-        $paragraphAfter = 12; //Este es el número del párrafo tras el que irá la publicidad
+        $paragraphAfter = 9; //Este es el número del párrafo tras el que irá la publicidad
         $content = explode ( "</p>", $content );
         $new_content = '';
             for ( $i = 0; $i < count ( $content ); $i ++ ) {
@@ -99,7 +102,7 @@ function mmx_adsense_in_content_twelfth_paragraph( $content ) {
         }
         return $new_content;
 }
-//add_filter( 'the_content', 'mmx_adsense_in_content_twelfth_paragraph' );
+add_filter( 'the_content', 'mmx_adsense_in_content_twelfth_paragraph' );
 
 
 /**

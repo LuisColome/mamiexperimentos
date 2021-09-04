@@ -39,6 +39,63 @@
             "maxlength": "",
             "rows": 6,
             "new_lines": ""
+        },
+        {
+            "key": "field_612ddbf2525dd",
+            "label": "Adsense in posts body (after third paragraph)",
+            "name": "mmx_adsense_post_body_third",
+            "type": "textarea",
+            "instructions": "Adsense visible bellow the third paragraph in post content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_61331c39db693",
+            "label": "Adsense in posts body after tenth paragraph)",
+            "name": "mmx_adsense_post_body_tenth",
+            "type": "textarea",
+            "instructions": "Adsense visible bellow the tenth paragraph in post content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
+        },
+        {
+            "key": "field_6130780aab296",
+            "label": "Adsense custom  block",
+            "name": "mmx_adsense_custom_block",
+            "type": "textarea",
+            "instructions": "Adsense code for the custom block.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 6,
+            "new_lines": ""
         }
     ],
     "location": [
@@ -58,5 +115,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625072006
+    "modified": 1630739831
 }
