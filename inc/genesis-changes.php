@@ -162,10 +162,10 @@ add_filter( 'genesis_markup_comment-time-link_content', 'lcm_remove_comment_time
  * Fechas relativas en los comentarios
  * @link https://www.revood.com/relative-dates-for-posts-and-comments-in-wordpress/
  */
-function human_get_the_date ($date) {
-    return 'hace ' . human_time_diff( strtotime( $date ) );
-}
-add_filter( 'get_comment_date', 'human_get_the_date' ); 
+// function human_get_the_date ($date) {
+//     return 'hace ' . human_time_diff( strtotime( $date ) );
+// }
+// add_filter( 'get_comment_date', 'human_get_the_date' ); 
 
 /**
  * Adds body classes to help with block styling.
