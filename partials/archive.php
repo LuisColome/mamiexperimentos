@@ -19,7 +19,6 @@ $img = genesis_get_image(
     ));
 
 echo '<article class="entrada blog">';
-    // echo '<a href="' . get_permalink() . '" class="entrada__link" tabindex="-1" aria-hidden="true">';
 
         echo '<header class="entrada__img">';
             echo '<a href="' . get_permalink() . '" class="entrada__title__link">' . $img . '</a>';
@@ -31,7 +30,6 @@ echo '<article class="entrada blog">';
             echo '</p>';
         echo '</div>';
 
-    // echo '</a>';
 echo '</article>';
 
 
